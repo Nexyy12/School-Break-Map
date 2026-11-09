@@ -2,7 +2,7 @@
   "meta": {
     "schoolYear": "2025—2026",
     "datasetUpdatedAt": "2026-11-09",
-    "disclaimer": "默认展示义务教育（小学、初中）区间；高三、初三等年级安排可能不同，请以各地教育局正式校历为准。"
+    "disclaimer": "默认展示义务教育（小学、初中）区间；高三、初三等年级安排可能不同，请以各地教育局正式校历为准。部分西部/外省城市在无市级原文时沿用媒体汇总或省级框架，并标注 illustrative。"
   },
   "provinces": [
     {
@@ -14,10 +14,26 @@
         {
           "name": "北京市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "暂无全省统一春假制度" },
-            "summer": { "start": "2026-07-08", "end": "2026-08-31", "note": "义务教育" },
-            "autumn": { "start": null, "end": null, "note": "暂无全省统一秋假制度" },
-            "winter": { "start": "2026-01-24", "end": "2026-03-01", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "暂无全省统一春假制度"
+            },
+            "summer": {
+              "start": "2026-07-08",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "暂无全省统一秋假制度"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-01",
+              "note": "义务教育"
+            }
           },
           "source": "https://jw.beijing.gov.cn/xxgk/2024zcwj/2024qtwj/202507/t20250704_4141331.html",
           "updatedAt": "2025-07-04",
@@ -26,30 +42,330 @@
       ]
     },
     {
-      "code": "GD",
-      "name": "广东",
-      "mapName": "广东省",
-      "svgName": "Guangdong",
+      "code": "TJ",
+      "name": "天津",
+      "mapName": "天津市",
+      "svgName": "Tianjin",
       "cities": [
         {
-          "name": "广州市",
+          "name": "天津市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "以市校历为准，暂无统一春假" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "结束日待秋季校历全文公布" },
-            "autumn": { "start": null, "end": null, "note": "部分地区探索中" },
-            "winter": { "start": "2026-01-31", "end": "2026-03-02", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "探索春秋假中，无全市统一日期"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育（第二学期校历惯例）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索春秋假中，无全市统一日期"
+            },
+            "winter": {
+              "start": "2026-01-29",
+              "end": "2026-03-01",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://tj.bendibao.com/edu/202617/164399.shtm",
+          "updatedAt": "2026-01-07",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HE",
+      "name": "河北",
+      "mapName": "河北省",
+      "svgName": "Hebei",
+      "cities": [
+        {
+          "name": "石家庄市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "winter": {
+              "start": "2026-01-28",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://hbxw.hebnews.cn/news/583610.html",
+          "updatedAt": "2026-01-30",
+          "illustrative": true
+        },
+        {
+          "name": "唐山市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "winter": {
+              "start": "2026-01-28",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://hbxw.hebnews.cn/news/583610.html",
+          "updatedAt": "2026-01-30",
+          "illustrative": true
+        },
+        {
+          "name": "保定市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "winter": {
+              "start": "2026-01-28",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://hbxw.hebnews.cn/news/583610.html",
+          "updatedAt": "2026-01-30",
+          "illustrative": true
+        },
+        {
+          "name": "邯郸市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "winter": {
+              "start": "2026-01-28",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://hbxw.hebnews.cn/news/583610.html",
+          "updatedAt": "2026-01-30",
+          "illustrative": true
+        },
+        {
+          "name": "廊坊市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "省里探索春秋假，各市错峰安排"
+            },
+            "winter": {
+              "start": "2026-01-28",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://hbxw.hebnews.cn/news/583610.html",
+          "updatedAt": "2026-01-30",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "SX",
+      "name": "山西",
+      "mapName": "山西省",
+      "svgName": "Shanxi",
+      "cities": [
+        {
+          "name": "太原市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
           },
           "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
           "updatedAt": "2025-08-16",
           "illustrative": true
         },
         {
-          "name": "佛山市",
+          "name": "大同市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "以试点通知为准" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "与省框架衔接" },
-            "autumn": { "start": "2025-11-12", "end": "2025-11-14", "note": "秋假试点（参考 2025 年秋季安排）" },
-            "winter": { "start": "2026-01-31", "end": "2026-03-02", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "运城市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "临汾市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "长治市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
           },
           "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
           "updatedAt": "2025-08-16",
@@ -58,41 +374,1001 @@
       ]
     },
     {
-      "code": "GZ",
-      "name": "贵州",
-      "mapName": "贵州省",
-      "svgName": "Guizhou",
+      "code": "NM",
+      "name": "内蒙古",
+      "mapName": "内蒙古自治区",
+      "svgName": "Nei Mongol",
       "cities": [
         {
-          "name": "贵阳市",
+          "name": "呼和浩特市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "省级方案探索中，市县不一" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "结束日待公布" },
-            "autumn": { "start": null, "end": null, "note": "尚未全省推行" },
-            "winter": { "start": "2026-01-24", "end": "2026-03-02", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-02-28",
+              "note": "参照北方省份常见安排，以盟市通知为准"
+            }
           },
-          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
-          "updatedAt": "2025-06-12",
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "包头市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-02-28",
+              "note": "参照北方省份常见安排，以盟市通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "鄂尔多斯市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-02-28",
+              "note": "参照北方省份常见安排，以盟市通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "赤峰市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-02-28",
+              "note": "参照北方省份常见安排，以盟市通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "呼伦贝尔市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以盟市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-02-28",
+              "note": "参照北方省份常见安排，以盟市通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "LN",
+      "name": "辽宁",
+      "mapName": "辽宁省",
+      "svgName": "Liaoning",
+      "cities": [
+        {
+          "name": "沈阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一春假"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一秋假"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-01",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
+          "updatedAt": "2025-08-27",
+          "illustrative": false
+        },
+        {
+          "name": "大连市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-01",
+              "note": "参照省内框架，具体以市教育局为准"
+            }
+          },
+          "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
+          "updatedAt": "2025-08-27",
+          "illustrative": true
+        },
+        {
+          "name": "鞍山市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-01",
+              "note": "参照省内框架，具体以市教育局为准"
+            }
+          },
+          "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
+          "updatedAt": "2025-08-27",
+          "illustrative": true
+        },
+        {
+          "name": "锦州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-01",
+              "note": "参照省内框架，具体以市教育局为准"
+            }
+          },
+          "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
+          "updatedAt": "2025-08-27",
+          "illustrative": true
+        },
+        {
+          "name": "抚顺市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-01",
+              "note": "参照省内框架，具体以市教育局为准"
+            }
+          },
+          "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
+          "updatedAt": "2025-08-27",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "JL",
+      "name": "吉林",
+      "mapName": "吉林省",
+      "svgName": "Jilin",
+      "cities": [
+        {
+          "name": "长春市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "参照东北省份常见安排，以市州通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "吉林市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "参照东北省份常见安排，以市州通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "延边朝鲜族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "参照东北省份常见安排，以市州通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "四平市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "参照东北省份常见安排，以市州通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        },
+        {
+          "name": "通化市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "参照东北省份常见安排，以市州通知为准"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HL",
+      "name": "黑龙江",
+      "mapName": "黑龙江省",
+      "svgName": "Heilongjiang",
+      "cities": [
+        {
+          "name": "哈尔滨市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": false
+        },
+        {
+          "name": "齐齐哈尔市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": false
+        },
+        {
+          "name": "大庆市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": false
+        },
+        {
+          "name": "牡丹江市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
+          "illustrative": false
+        },
+        {
+          "name": "佳木斯市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "summer": {
+              "start": "2026-07-16",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市地校历为准"
+            },
+            "winter": {
+              "start": "2026-01-16",
+              "end": "2026-02-28",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://hlj.people.com.cn/n2/2025/0825/c220005-41331353.html",
+          "updatedAt": "2025-08-25",
           "illustrative": false
         }
       ]
     },
     {
-      "code": "HI",
-      "name": "海南",
-      "mapName": "海南省",
-      "svgName": "Hainan",
+      "code": "SH",
+      "name": "上海",
+      "mapName": "上海市",
+      "svgName": "Shanghai",
       "cities": [
         {
-          "name": "海口市",
+          "name": "上海市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "消费促进方案提及探索，无统一日期" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "省级校历框架" },
-            "autumn": { "start": null, "end": null, "note": "探索中" },
-            "winter": { "start": "2026-01-17", "end": "2026-03-02", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一春假制度"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "中小学统一校历"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一秋假制度"
+            },
+            "winter": {
+              "start": "2026-02-02",
+              "end": "2026-02-27",
+              "note": "义务教育"
+            }
           },
-          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
-          "updatedAt": "2026-01-06",
+          "source": "https://edu.sh.gov.cn/xxgk2_zdgz_jcjy_05/20250418/13e7f8c39763419cb70972d1d409b721.html",
+          "updatedAt": "2025-04-22",
+          "illustrative": false
+        }
+      ]
+    },
+    {
+      "code": "JS",
+      "name": "江苏",
+      "mapName": "江苏省",
+      "svgName": "Jiangsu",
+      "cities": [
+        {
+          "name": "南京市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://edu.nanjing.gov.cn/xwdt/yw/202602/t20260226_5796293.html",
+          "updatedAt": "2026-02-26",
+          "illustrative": false
+        },
+        {
+          "name": "无锡市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "徐州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "常州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "苏州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "南通市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "扬州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "镇江市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "泰州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "盐城市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "淮安市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
+          "illustrative": false
+        },
+        {
+          "name": "连云港市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.lyg.gov.cn/zglygzfmhwz/rdhy/content/d36d64d1-67e8-4f16-a255-694e53d2b2b4.shtml",
+          "updatedAt": "2025-10-21",
+          "illustrative": false
+        },
+        {
+          "name": "宿迁市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一春假；南京等地偶有学期中活动假"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "全省未统一秋假"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
+          "updatedAt": "2026-01-28",
           "illustrative": false
         }
       ]
@@ -106,13 +1382,1049 @@
         {
           "name": "杭州市",
           "breaks": {
-            "spring": { "start": "2026-04-03", "end": "2026-04-05", "note": "春秋假各约 3 天（长期制度，示例年度）" },
-            "summer": { "start": "2026-07-04", "end": null, "note": "杭州惯例，结束日待确认" },
-            "autumn": { "start": "2026-10-04", "end": "2026-10-06", "note": "春秋假制度，具体以市通知为准" },
-            "winter": { "start": "2026-02-07", "end": "2026-03-04", "note": "义务教育" }
+            "spring": {
+              "start": "2026-04-03",
+              "end": "2026-04-05",
+              "note": "春秋假制度（区县可微调）"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": null,
+              "note": "杭州惯例，结束日待确认"
+            },
+            "autumn": {
+              "start": "2025-09-29",
+              "end": "2025-09-30",
+              "note": "2025 学年秋假（拱墅区示例，与国庆衔接）"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
           },
-          "source": "https://news.cctv.com/2025/09/17/ARTIesQxYmQzgn50K4LfJAPA250917.shtml",
-          "updatedAt": "2025-09-17",
+          "source": "https://edu.hangzhou.com.cn/xxdt/content/2025-09/04/content_9075955.htm",
+          "updatedAt": "2025-09-04",
+          "illustrative": true
+        },
+        {
+          "name": "宁波市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假各约 3 天，2026 年春假日期另文公布"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "全市春秋假制度（2025 秋假）"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.ncmc.nbtv.cn/xwdsg/nb/40294031.shtml",
+          "updatedAt": "2025-07-03",
+          "illustrative": false
+        },
+        {
+          "name": "温州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假各约 3 天，市级弹性安排"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "秋假 11 月前后，以县市区通知为准"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
+          "updatedAt": "2026-01-15",
+          "illustrative": true
+        },
+        {
+          "name": "嘉兴市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假制度，春假多与五一衔接"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "南湖区 2025 秋假示例"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
+          "updatedAt": "2026-01-15",
+          "illustrative": true
+        },
+        {
+          "name": "湖州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假制度"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "德清县 2025 秋假示例"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
+          "updatedAt": "2025-10-11",
+          "illustrative": true
+        },
+        {
+          "name": "绍兴市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假制度"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "秋假 10—11 月，以县市方案为准"
+            },
+            "winter": {
+              "start": "2026-02-08",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
+          "updatedAt": "2026-01-15",
+          "illustrative": true
+        },
+        {
+          "name": "金华市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "初三年级不安排春假"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-21",
+              "end": "2025-11-23",
+              "note": "市区 2025 秋假含周末连休示例"
+            },
+            "winter": {
+              "start": "2026-02-09",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
+          "updatedAt": "2025-10-11",
+          "illustrative": true
+        },
+        {
+          "name": "衢州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假制度"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-19",
+              "end": "2025-11-21",
+              "note": "2025 年秋假暂定"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
+          "updatedAt": "2025-10-11",
+          "illustrative": true
+        },
+        {
+          "name": "舟山市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假制度"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-19",
+              "end": "2025-11-21",
+              "note": "2025 年秋假暂定"
+            },
+            "winter": {
+              "start": "2026-02-08",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
+          "updatedAt": "2025-10-11",
+          "illustrative": true
+        },
+        {
+          "name": "台州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假 3 天，县市区确定"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "春秋假 3 天，县市区确定"
+            },
+            "winter": {
+              "start": "2026-02-10",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
+          "updatedAt": "2026-01-15",
+          "illustrative": true
+        },
+        {
+          "name": "丽水市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春假 2—3 天，可与五一连休"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "3 月 5 日正式上课"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "秋假 11 月，县市区部署"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
+          "updatedAt": "2026-01-15",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "AH",
+      "name": "安徽",
+      "mapName": "安徽省",
+      "svgName": "Anhui",
+      "cities": [
+        {
+          "name": "合肥市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市管县通知为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市管县通知为准"
+            },
+            "winter": {
+              "start": "2026-02-05",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20251223A050RX00",
+          "updatedAt": "2025-12-23",
+          "illustrative": true
+        },
+        {
+          "name": "芜湖市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-01",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://jyj.wuhu.gov.cn/openness/public/6596321/40159645.html",
+          "updatedAt": "2025-07-21",
+          "illustrative": false
+        },
+        {
+          "name": "蚌埠市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-02-05",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20251223A050RX00",
+          "updatedAt": "2025-12-23",
+          "illustrative": true
+        },
+        {
+          "name": "阜阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-02-05",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20251223A050RX00",
+          "updatedAt": "2025-12-23",
+          "illustrative": true
+        },
+        {
+          "name": "安庆市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-02-05",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20251223A050RX00",
+          "updatedAt": "2025-12-23",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "FJ",
+      "name": "福建",
+      "mapName": "福建省",
+      "svgName": "Fujian",
+      "cities": [
+        {
+          "name": "福州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以闽教办基〔2025〕11 号及市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-02-25",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://jyj.fuzhou.gov.cn/zwgk/tzgg/202506/t20250613_5033399.htm",
+          "updatedAt": "2025-06-13",
+          "illustrative": false
+        },
+        {
+          "name": "厦门市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省厅框架下以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-03",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
+          "updatedAt": "2025-08-07",
+          "illustrative": true
+        },
+        {
+          "name": "泉州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省厅框架下以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-03",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
+          "updatedAt": "2025-08-07",
+          "illustrative": true
+        },
+        {
+          "name": "漳州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省厅框架下以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-03",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
+          "updatedAt": "2025-08-07",
+          "illustrative": true
+        },
+        {
+          "name": "龙岩市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省厅框架下以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-03",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-02-07",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
+          "updatedAt": "2025-08-07",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "JX",
+      "name": "江西",
+      "mapName": "江西省",
+      "svgName": "Jiangxi",
+      "cities": [
+        {
+          "name": "南昌市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "赣州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "九江市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "上饶市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "宜春市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以设区市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "SD",
+      "name": "山东",
+      "mapName": "山东省",
+      "svgName": "Shandong",
+      "cities": [
+        {
+          "name": "济南市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "部分地市探索春秋假"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "淄博等试点秋假，济南待公布"
+            },
+            "winter": {
+              "start": "2026-02-03",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://jnedu.jinan.gov.cn/col/col48443/art/2026/art_c51ee7a983544aac917004d8d4dad89b.html",
+          "updatedAt": "2026-06-18",
+          "illustrative": false
+        },
+        {
+          "name": "青岛市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-06",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "2026 秋假待市级方案"
+            },
+            "winter": {
+              "start": "2026-02-03",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://edu.qingdao.gov.cn/tzgg/202506/t20250610_9645107.shtml",
+          "updatedAt": "2025-06-10",
+          "illustrative": false
+        },
+        {
+          "name": "烟台市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": "2025-11-06",
+              "end": "2025-11-10",
+              "note": "2025 年秋假试点（含周末连休）"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.qtv.com.cn/system/2026/06/18/016158995.shtml",
+          "updatedAt": "2026-06-18",
+          "illustrative": true
+        },
+        {
+          "name": "潍坊市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "部分地市探索春秋假"
+            },
+            "summer": {
+              "start": "2026-07-06",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "临沂等试点秋假，以市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-04",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://sd.news.cn/20251217/d14ad12d52f142ecb534250ff14a2bdb/c.html",
+          "updatedAt": "2025-12-17",
+          "illustrative": true
+        },
+        {
+          "name": "临沂市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "部分地市探索春秋假"
+            },
+            "summer": {
+              "start": "2026-07-06",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "临沂等试点秋假，以市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-04",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://sd.news.cn/20251217/d14ad12d52f142ecb534250ff14a2bdb/c.html",
+          "updatedAt": "2025-12-17",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HA",
+      "name": "河南",
+      "mapName": "河南省",
+      "svgName": "Henan",
+      "cities": [
+        {
+          "name": "郑州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://zzjy.zhengzhou.gov.cn/gzdt/9834884.jhtml",
+          "updatedAt": "2026-01-07",
+          "illustrative": false
+        },
+        {
+          "name": "洛阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省多市统一寒假框架"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://m.thepaper.cn/newsDetail_forward_32345165",
+          "updatedAt": "2026-01-08",
+          "illustrative": true
+        },
+        {
+          "name": "南阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省多市统一寒假框架"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://m.thepaper.cn/newsDetail_forward_32345165",
+          "updatedAt": "2026-01-08",
+          "illustrative": true
+        },
+        {
+          "name": "新乡市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省多市统一寒假框架"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://m.thepaper.cn/newsDetail_forward_32345165",
+          "updatedAt": "2026-01-08",
+          "illustrative": true
+        },
+        {
+          "name": "商丘市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "全省多市统一寒假框架"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以省辖市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-06",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://m.thepaper.cn/newsDetail_forward_32345165",
+          "updatedAt": "2026-01-08",
           "illustrative": true
         }
       ]
@@ -126,26 +2438,798 @@
         {
           "name": "武汉市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "以武汉市校历为准" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "约 7 月中旬起" },
-            "autumn": { "start": null, "end": null, "note": "武汉城区暂无统一秋假" },
-            "winter": { "start": "2026-01-31", "end": "2026-03-04", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以武汉市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "武汉城区暂无统一秋假"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://m.cnhubei.com/content/2025-09/02/content_19468079.html",
+          "updatedAt": "2025-09-02",
+          "illustrative": false
+        },
+        {
+          "name": "恩施土家族苗族自治州",
+          "breaks": {
+            "spring": {
+              "start": "2026-04-01",
+              "end": "2026-04-07",
+              "note": "州内春秋假不少于 1 周（示意）"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": "2026-10-01",
+              "end": "2026-10-07",
+              "note": "春秋假制度"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.cctv.cn/2025/09/17/ARTIesQxYmQzgn50K4LfJAPA250917.shtml",
+          "updatedAt": "2025-09-17",
+          "illustrative": true
+        },
+        {
+          "name": "襄阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
           },
           "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
           "updatedAt": "2025-08-16",
           "illustrative": true
         },
         {
-          "name": "恩施土家族苗族自治州",
+          "name": "宜昌市",
           "breaks": {
-            "spring": { "start": "2026-04-01", "end": "2026-04-07", "note": "州内春秋假不少于 1 周（示意）" },
-            "summer": { "start": "2026-07-11", "end": null, "note": "与省框架衔接" },
-            "autumn": { "start": "2026-10-01", "end": "2026-10-07", "note": "春秋假制度" },
-            "winter": { "start": "2026-01-31", "end": "2026-03-04", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
           },
-          "source": "https://news.cctv.com/2025/09/17/ARTIesQxYmQzgn50K4LfJAPA250917.shtml",
-          "updatedAt": "2025-09-17",
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
           "illustrative": true
+        },
+        {
+          "name": "黄石市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "荆州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HN",
+      "name": "湖南",
+      "mapName": "湖南省",
+      "svgName": "Hunan",
+      "cities": [
+        {
+          "name": "长沙市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-12",
+              "end": "2026-08-29",
+              "note": "普通中小学、职校"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "winter": {
+              "start": "2026-02-01",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://edu.rednet.cn/content/646954/57/15348356.html",
+          "updatedAt": "2025-10-13",
+          "illustrative": false
+        },
+        {
+          "name": "株洲市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-12",
+              "end": "2026-08-29",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-02-01",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.hnedutv.com/content/14489520",
+          "updatedAt": "2025-08-18",
+          "illustrative": true
+        },
+        {
+          "name": "衡阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-12",
+              "end": "2026-08-29",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-02-01",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.hnedutv.com/content/14489520",
+          "updatedAt": "2025-08-18",
+          "illustrative": true
+        },
+        {
+          "name": "岳阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-12",
+              "end": "2026-08-29",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-02-01",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.hnedutv.com/content/14489520",
+          "updatedAt": "2025-08-18",
+          "illustrative": true
+        },
+        {
+          "name": "常德市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-12",
+              "end": "2026-08-29",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-02-01",
+              "end": "2026-03-03",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.hnedutv.com/content/14489520",
+          "updatedAt": "2025-08-18",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "GD",
+      "name": "广东",
+      "mapName": "广东省",
+      "svgName": "Guangdong",
+      "cities": [
+        {
+          "name": "广州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "鼓励有条件的区探索春假，非全市统一"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "部分地区探索中"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gz.gov.cn/zfjg/gzsjyj/tzgg/content/post_10330220.html",
+          "updatedAt": "2025-06-27",
+          "illustrative": false
+        },
+        {
+          "name": "深圳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202510/24/c11845344.html",
+          "updatedAt": "2025-10-24",
+          "illustrative": true
+        },
+        {
+          "name": "佛山市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "春秋假试点"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "秋假试点（参考 2025 年秋季安排）"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "东莞市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202510/24/c11845344.html",
+          "updatedAt": "2025-10-24",
+          "illustrative": true
+        },
+        {
+          "name": "惠州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": null,
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202510/24/c11845344.html",
+          "updatedAt": "2025-10-24",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "GX",
+      "name": "广西",
+      "mapName": "广西壮族自治区",
+      "svgName": "Guangxi Zhuang",
+      "cities": [
+        {
+          "name": "南宁市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "柳州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "桂林市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "玉林市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "百色市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HI",
+      "name": "海南",
+      "mapName": "海南省",
+      "svgName": "Hainan",
+      "cities": [
+        {
+          "name": "海口市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "消费促进方案提及探索，无统一日期"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
+          "updatedAt": "2026-01-06",
+          "illustrative": false
+        },
+        {
+          "name": "三亚市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "参照省全日制中小学校历"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
+          "updatedAt": "2026-01-06",
+          "illustrative": true
+        },
+        {
+          "name": "儋州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "参照省全日制中小学校历"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
+          "updatedAt": "2026-01-06",
+          "illustrative": true
+        },
+        {
+          "name": "琼海市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "参照省全日制中小学校历"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
+          "updatedAt": "2026-01-06",
+          "illustrative": true
+        },
+        {
+          "name": "文昌市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "参照省全日制中小学校历"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
+          "updatedAt": "2026-01-06",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "CQ",
+      "name": "重庆",
+      "mapName": "重庆市",
+      "svgName": "Chongqing",
+      "cities": [
+        {
+          "name": "重庆市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一春假"
+            },
+            "summer": {
+              "start": "2026-07-02",
+              "end": null,
+              "note": "义务教育；高中 7 月 9 日起"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "暂无统一秋假"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://jw.cq.gov.cn/zwxx_209/gggs/202506/t20250625_14744176.html",
+          "updatedAt": "2025-06-25",
+          "illustrative": false
         }
       ]
     },
@@ -158,10 +3242,610 @@
         {
           "name": "成都市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "市级以省框架执行为主" },
-            "summer": { "start": "2026-07-15", "end": null, "note": "7 月中旬前后（示意）" },
-            "autumn": { "start": null, "end": null, "note": "自贡、宜宾等试点 2—3 天" },
-            "winter": { "start": "2026-01-31", "end": "2026-03-02", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "市级以省框架执行为主"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "自贡、宜宾等试点 2—3 天"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://cd.bendibao.com/edu/202574/199445.shtm",
+          "updatedAt": "2025-07-04",
+          "illustrative": true
+        },
+        {
+          "name": "绵阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
+          "updatedAt": "2025-07-04",
+          "illustrative": true
+        },
+        {
+          "name": "南充市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
+          "updatedAt": "2025-07-04",
+          "illustrative": true
+        },
+        {
+          "name": "宜宾市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "部分区县春秋假试点"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
+          "updatedAt": "2025-07-04",
+          "illustrative": true
+        },
+        {
+          "name": "泸州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": null,
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.chuannan.net/zixun/219980.html",
+          "updatedAt": "2025-06-26",
+          "illustrative": true
+        },
+        {
+          "name": "德阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-31",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
+          "updatedAt": "2025-07-04",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "GZ",
+      "name": "贵州",
+      "mapName": "贵州省",
+      "svgName": "Guizhou",
+      "cities": [
+        {
+          "name": "贵阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "省级方案探索中，市县不一"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "尚未全省推行"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
+          "updatedAt": "2025-06-12",
+          "illustrative": false
+        },
+        {
+          "name": "遵义市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
+          "updatedAt": "2025-06-12",
+          "illustrative": true
+        },
+        {
+          "name": "六盘水市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
+          "updatedAt": "2025-06-12",
+          "illustrative": true
+        },
+        {
+          "name": "毕节市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
+          "updatedAt": "2025-06-12",
+          "illustrative": true
+        },
+        {
+          "name": "黔东南苗族侗族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-01-24",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
+          "updatedAt": "2025-06-12",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "YN",
+      "name": "云南",
+      "mapName": "云南省",
+      "svgName": "Yunnan",
+      "cities": [
+        {
+          "name": "昆明市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "曲靖市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "大理白族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "红河哈尼族彝族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "玉溪市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-11",
+              "end": null,
+              "note": "结束日待秋季校历全文公布"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "XZ",
+      "name": "西藏",
+      "mapName": "西藏自治区",
+      "svgName": "Xizang (Tibet) ",
+      "cities": [
+        {
+          "name": "拉萨市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育；高原地区以地市通知为准"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-05",
+              "note": "演示数据，请核对自治区教育厅/地市通知"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "日喀则市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育；高原地区以地市通知为准"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-05",
+              "note": "演示数据，请核对自治区教育厅/地市通知"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "林芝市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育；高原地区以地市通知为准"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-05",
+              "note": "演示数据，请核对自治区教育厅/地市通知"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "昌都市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育；高原地区以地市通知为准"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-05",
+              "note": "演示数据，请核对自治区教育厅/地市通知"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "山南市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育；高原地区以地市通知为准"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-05",
+              "note": "演示数据，请核对自治区教育厅/地市通知"
+            }
           },
           "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
           "updatedAt": "2025-08-16",
@@ -178,13 +3862,805 @@
         {
           "name": "西安市",
           "breaks": {
-            "spring": { "start": null, "end": null, "note": "汉中等地有试点报道，西安暂无统一春假" },
-            "summer": { "start": "2026-07-15", "end": null, "note": "7 月中旬前后（示意）" },
-            "autumn": { "start": null, "end": null, "note": "部分地市探索中" },
-            "winter": { "start": "2026-02-02", "end": "2026-03-05", "note": "义务教育" }
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "汉中等地有试点报道，西安暂无统一春假"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": null,
+              "note": "7 月中旬前后"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "部分地市探索中"
+            },
+            "winter": {
+              "start": "2026-02-02",
+              "end": "2026-03-05",
+              "note": "义务教育"
+            }
           },
           "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
           "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "榆林市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-05",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-17",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://news.qq.com/rain/a/20250531A03NDX00",
+          "updatedAt": "2025-05-31",
+          "illustrative": false
+        },
+        {
+          "name": "汉中市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "有春秋假试点报道"
+            },
+            "summer": {
+              "start": "2026-07-04",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "探索中"
+            },
+            "winter": {
+              "start": "2026-02-02",
+              "end": "2026-03-04",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://xa.bendibao.com/edu/jiaoyuzixun/list16.htm",
+          "updatedAt": "2026-01-04",
+          "illustrative": true
+        },
+        {
+          "name": "咸阳市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-08",
+              "end": null,
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-02",
+              "end": "2026-03-05",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "宝鸡市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-08",
+              "end": null,
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-02-02",
+              "end": "2026-03-05",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "GS",
+      "name": "甘肃",
+      "mapName": "甘肃省",
+      "svgName": "Gansu",
+      "cities": [
+        {
+          "name": "兰州市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "天水市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "酒泉市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "张掖市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "武威市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "QH",
+      "name": "青海",
+      "mapName": "青海省",
+      "svgName": "Quinghai",
+      "cities": [
+        {
+          "name": "西宁市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "海东市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "海西蒙古族藏族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "玉树藏族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "格尔木市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市州校历为准"
+            },
+            "winter": {
+              "start": "2026-01-15",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "NX",
+      "name": "宁夏",
+      "mapName": "宁夏回族自治区",
+      "svgName": "Ningxia Hui",
+      "cities": [
+        {
+          "name": "银川市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "石嘴山市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "吴忠市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "固原市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "中卫市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以市通知为准"
+            },
+            "winter": {
+              "start": "2026-01-20",
+              "end": "2026-03-02",
+              "note": "义务教育"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "XJ",
+      "name": "新疆",
+      "mapName": "新疆维吾尔自治区",
+      "svgName": "Xinjiang Uygur",
+      "cities": [
+        {
+          "name": "乌鲁木齐市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-10",
+              "end": "2026-03-01",
+              "note": "南北疆差异大，以地州市教育局通知为准"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "喀什地区",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-10",
+              "end": "2026-03-01",
+              "note": "南北疆差异大，以地州市教育局通知为准"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "伊犁哈萨克自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-10",
+              "end": "2026-03-01",
+              "note": "南北疆差异大，以地州市教育局通知为准"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "昌吉回族自治州",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-10",
+              "end": "2026-03-01",
+              "note": "南北疆差异大，以地州市教育局通知为准"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        },
+        {
+          "name": "克拉玛依市",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "summer": {
+              "start": "2026-07-01",
+              "end": "2026-08-31",
+              "note": "义务教育"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以地州市校历为准"
+            },
+            "winter": {
+              "start": "2026-01-10",
+              "end": "2026-03-01",
+              "note": "南北疆差异大，以地州市教育局通知为准"
+            }
+          },
+          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
+          "updatedAt": "2025-08-16",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "HK",
+      "name": "香港",
+      "mapName": "香港特别行政区",
+      "svgName": "Hong Kong",
+      "cities": [
+        {
+          "name": "香港",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "本地學年分段與內地「春假」制度不同"
+            },
+            "summer": {
+              "start": "2026-07-10",
+              "end": "2026-08-31",
+              "note": "中小學暑假大致區間（以教育局學年曆為準）"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以教育局學年曆及學校公布為準"
+            },
+            "winter": {
+              "start": null,
+              "end": null,
+              "note": "Christmas/New Year 及農曆新年假期分段安排，請查教育局學年曆"
+            }
+          },
+          "source": "https://www.edb.gov.hk/",
+          "updatedAt": "2025-09-01",
+          "illustrative": true
+        }
+      ]
+    },
+    {
+      "code": "MO",
+      "name": "澳门",
+      "mapName": "澳门特别行政区",
+      "svgName": "Macau",
+      "cities": [
+        {
+          "name": "澳门",
+          "breaks": {
+            "spring": {
+              "start": null,
+              "end": null,
+              "note": "本地學制與內地「春假」不同"
+            },
+            "summer": {
+              "start": "2026-07-15",
+              "end": "2026-08-31",
+              "note": "非高等教育階段暑假大致區間"
+            },
+            "autumn": {
+              "start": null,
+              "end": null,
+              "note": "以教青局及學校校曆為準"
+            },
+            "winter": {
+              "start": null,
+              "end": null,
+              "note": "農曆新年等法定假期分段，請查教青局校曆"
+            }
+          },
+          "source": "https://www.dsedj.gov.mo/",
+          "updatedAt": "2025-09-01",
           "illustrative": true
         }
       ]
