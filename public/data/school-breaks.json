@@ -99,7 +99,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "省里探索春秋假，各市错峰安排"
+              "note": "2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期"
             },
             "winter": {
               "start": "2026-01-28",
@@ -108,7 +108,7 @@
             }
           },
           "source": "https://hbxw.hebnews.cn/news/583610.html",
-          "updatedAt": "2026-01-30",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -127,7 +127,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "省里探索春秋假，各市错峰安排"
+              "note": "2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期"
             },
             "winter": {
               "start": "2026-01-28",
@@ -136,7 +136,7 @@
             }
           },
           "source": "https://hbxw.hebnews.cn/news/583610.html",
-          "updatedAt": "2026-01-30",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -155,7 +155,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "省里探索春秋假，各市错峰安排"
+              "note": "2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期"
             },
             "winter": {
               "start": "2026-01-28",
@@ -164,7 +164,7 @@
             }
           },
           "source": "https://hbxw.hebnews.cn/news/583610.html",
-          "updatedAt": "2026-01-30",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -183,7 +183,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "省里探索春秋假，各市错峰安排"
+              "note": "2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期"
             },
             "winter": {
               "start": "2026-01-28",
@@ -192,7 +192,7 @@
             }
           },
           "source": "https://hbxw.hebnews.cn/news/583610.html",
-          "updatedAt": "2026-01-30",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -211,7 +211,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "省里探索春秋假，各市错峰安排"
+              "note": "2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期"
             },
             "winter": {
               "start": "2026-01-28",
@@ -220,7 +220,7 @@
             }
           },
           "source": "https://hbxw.hebnews.cn/news/583610.html",
-          "updatedAt": "2026-01-30",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         }
       ]
@@ -245,9 +245,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "原则上为11月第二个周三至周五（2026年）"
             },
             "winter": {
               "start": "2026-01-31",
@@ -301,9 +301,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-11-05",
+              "end": "2026-11-09",
+              "note": "2026年秋假为11月5日、6日、9日三天，与周末衔接约5天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -393,9 +393,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以盟市校历为准"
+              "start": "2026-11-30",
+              "end": "2026-12-02",
+              "note": "2026年秋假3天，与11月28—29日周末衔接；初三、高三一般不安排"
             },
             "winter": {
               "start": "2026-01-17",
@@ -477,9 +477,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以盟市校历为准"
+              "start": "2026-11-28",
+              "end": "2026-12-02",
+              "note": "义务教育秋假，与周末衔接约5天"
             },
             "winter": {
               "start": "2026-01-17",
@@ -541,9 +541,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "暂无统一秋假"
+              "start": "2026-10-29",
+              "end": "2026-11-02",
+              "note": "2026年秋假含10月29—30日、11月2日等工作日，与周末衔接约5天"
             },
             "winter": {
               "start": "2026-01-15",
@@ -552,8 +552,8 @@
             }
           },
           "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
-          "updatedAt": "2025-08-27",
-          "illustrative": false
+          "updatedAt": "2026-11-09",
+          "illustrative": true
         },
         {
           "name": "大连市",
@@ -569,9 +569,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-10-30",
+              "end": "2026-11-03",
+              "note": "2026年秋假，与周末衔接约5天"
             },
             "winter": {
               "start": "2026-01-20",
@@ -580,7 +580,7 @@
             }
           },
           "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
-          "updatedAt": "2025-08-27",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -597,9 +597,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-10-30",
+              "end": "2026-11-04",
+              "note": "2026年秋假多在10月底至11月初，与周末连休"
             },
             "winter": {
               "start": "2026-01-20",
@@ -608,7 +608,7 @@
             }
           },
           "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
-          "updatedAt": "2025-08-27",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -625,9 +625,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-10-30",
+              "end": "2026-11-04",
+              "note": "2026年秋假多在10月底至11月初，与周末连休"
             },
             "winter": {
               "start": "2026-01-20",
@@ -636,7 +636,7 @@
             }
           },
           "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
-          "updatedAt": "2025-08-27",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -653,9 +653,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-10-30",
+              "end": "2026-11-04",
+              "note": "2026年秋假多在10月底至11月初，与周末连休"
             },
             "winter": {
               "start": "2026-01-20",
@@ -664,7 +664,7 @@
             }
           },
           "source": "https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html",
-          "updatedAt": "2025-08-27",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         }
       ]
@@ -1021,9 +1021,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "全省推行春秋假，与11月14—15日周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1032,7 +1032,7 @@
             }
           },
           "source": "https://edu.nanjing.gov.cn/xwdt/yw/202602/t20260226_5796293.html",
-          "updatedAt": "2026-02-26",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1049,9 +1049,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1060,7 +1060,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1077,9 +1077,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "部分区县实行，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1088,7 +1088,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1105,9 +1105,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1116,7 +1116,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1133,9 +1133,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1144,7 +1144,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1161,9 +1161,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-26",
+              "end": "2026-11-30",
+              "note": "与周末连休共5天（含11月28—29日）"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1172,7 +1172,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1189,9 +1189,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1200,7 +1200,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1217,9 +1217,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-26",
+              "end": "2026-11-30",
+              "note": "秋假含11月26、27、30日，与周末衔接"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1228,7 +1228,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1245,9 +1245,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1256,7 +1256,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1273,9 +1273,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1284,7 +1284,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1301,9 +1301,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "部分区县实行，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1312,7 +1312,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1329,9 +1329,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "部分区县实行，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1340,7 +1340,7 @@
             }
           },
           "source": "https://www.lyg.gov.cn/zglygzfmhwz/rdhy/content/d36d64d1-67e8-4f16-a255-694e53d2b2b4.shtml",
-          "updatedAt": "2025-10-21",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1357,9 +1357,9 @@
               "note": "结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "全省未统一秋假"
+              "start": "2026-11-14",
+              "end": "2026-11-18",
+              "note": "秋假与双休日连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1368,7 +1368,7 @@
             }
           },
           "source": "http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html",
-          "updatedAt": "2026-01-28",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         }
       ]
@@ -1393,9 +1393,9 @@
               "note": "杭州惯例，结束日待确认"
             },
             "autumn": {
-              "start": "2025-09-29",
-              "end": "2025-09-30",
-              "note": "2025 学年秋假（拱墅区示例，与国庆衔接）"
+              "start": "2026-09-28",
+              "end": "2026-09-30",
+              "note": "主城区2026年秋假，与中秋国庆衔接可连休；三县一市多为11月12、13、16日"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1403,9 +1403,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://edu.hangzhou.com.cn/xxdt/content/2025-09/04/content_9075955.htm",
-          "updatedAt": "2025-09-04",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "宁波市",
@@ -1413,7 +1413,7 @@
             "spring": {
               "start": null,
               "end": null,
-              "note": "春秋假各约 3 天，2026 年春假日期另文公布"
+              "note": "春秋假各约 3 天，2027 年春假另文公布"
             },
             "summer": {
               "start": "2026-07-05",
@@ -1421,9 +1421,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-12",
-              "end": "2025-11-14",
-              "note": "全市春秋假制度（2025 秋假）"
+              "start": "2026-11-25",
+              "end": "2026-11-27",
+              "note": "2026年全市统一秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1431,8 +1431,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.ncmc.nbtv.cn/xwdsg/nb/40294031.shtml",
-          "updatedAt": "2025-07-03",
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1451,7 +1451,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "秋假 11 月前后，以县市区通知为准"
+              "note": "2026年各县市区分两批：11月11—13日或11月16—18日，具体以县市区通知为准"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1459,9 +1459,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
-          "updatedAt": "2026-01-15",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "嘉兴市",
@@ -1477,9 +1477,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-12",
-              "end": "2025-11-14",
-              "note": "南湖区 2025 秋假示例"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "2026年全市统一秋假3天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1487,9 +1487,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
-          "updatedAt": "2026-01-15",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "湖州市",
@@ -1505,9 +1505,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-12",
-              "end": "2025-11-14",
-              "note": "德清县 2025 秋假示例"
+              "start": "2026-11-12",
+              "end": "2026-11-16",
+              "note": "2026年秋假为11月12、13、16日（分段），与周末衔接"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1515,9 +1515,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
-          "updatedAt": "2025-10-11",
-          "illustrative": true
+          "source": "https://epaper.zjjyzx.com.cn/html/2026-09/08/content_155847_3818335.htm",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "绍兴市",
@@ -1535,7 +1535,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "秋假 10—11 月，以县市方案为准"
+              "note": "2026年分三批：11月11—13日、16—18日或13/16/17日，区县不同"
             },
             "winter": {
               "start": "2026-02-08",
@@ -1543,9 +1543,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
-          "updatedAt": "2026-01-15",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "金华市",
@@ -1561,9 +1561,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-21",
-              "end": "2025-11-23",
-              "note": "市区 2025 秋假含周末连休示例"
+              "start": "2026-11-13",
+              "end": "2026-11-17",
+              "note": "2026年秋假为11月13、16、17日，与周末连休"
             },
             "winter": {
               "start": "2026-02-09",
@@ -1571,9 +1571,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
-          "updatedAt": "2025-10-11",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "衢州市",
@@ -1589,9 +1589,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-19",
-              "end": "2025-11-21",
-              "note": "2025 年秋假暂定"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "2026年全市统一秋假3天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1599,9 +1599,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
-          "updatedAt": "2025-10-11",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "舟山市",
@@ -1617,9 +1617,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-19",
-              "end": "2025-11-21",
-              "note": "2025 年秋假暂定"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "2026年秋假3天；区县可参照或自主安排"
             },
             "winter": {
               "start": "2026-02-08",
@@ -1627,9 +1627,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml",
-          "updatedAt": "2025-10-11",
-          "illustrative": true
+          "source": "https://www.cztv.com/newsDetail/894841",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "台州市",
@@ -1645,9 +1645,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "春秋假 3 天，县市区确定"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "2026年全市统一秋假3天"
             },
             "winter": {
               "start": "2026-02-10",
@@ -1655,9 +1655,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
-          "updatedAt": "2026-01-15",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "丽水市",
@@ -1673,9 +1673,9 @@
               "note": "3 月 5 日正式上课"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "秋假 11 月，县市区部署"
+              "start": "2026-11-09",
+              "end": "2026-11-11",
+              "note": "2026年全市统一秋假3天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1683,9 +1683,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://zj.ifeng.com/c/8puLa8mZiEy",
-          "updatedAt": "2026-01-15",
-          "illustrative": true
+          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         }
       ]
     },
@@ -1737,9 +1737,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-11-19",
+              "end": "2026-11-23",
+              "note": "2026年秋假含11月19、20、23日，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-06",
@@ -1748,8 +1748,8 @@
             }
           },
           "source": "https://jyj.wuhu.gov.cn/openness/public/6596321/40159645.html",
-          "updatedAt": "2025-07-21",
-          "illustrative": false
+          "updatedAt": "2026-11-09",
+          "illustrative": true
         },
         {
           "name": "蚌埠市",
@@ -1859,7 +1859,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年区县错峰：多数区11月18—20日，长乐/马尾11月23—25日，福清11月16—18日"
             },
             "winter": {
               "start": "2026-01-31",
@@ -1867,8 +1867,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://jyj.fuzhou.gov.cn/zwgk/tzgg/202506/t20250613_5033399.htm",
-          "updatedAt": "2025-06-13",
+          "source": "https://www.chinanews.com.cn/edu/2026/10-10/10709987.shtml",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -1885,9 +1885,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "探索中"
+              "start": "2026-11-25",
+              "end": "2026-11-27",
+              "note": "2026年秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1896,8 +1896,8 @@
             }
           },
           "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
-          "updatedAt": "2025-08-07",
-          "illustrative": true
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "泉州市",
@@ -1915,7 +1915,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年各县区错峰安排，以市教育局通知为准"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1924,7 +1924,7 @@
             }
           },
           "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
-          "updatedAt": "2025-08-07",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -1943,7 +1943,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年各县区错峰安排，以市教育局通知为准"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1952,7 +1952,7 @@
             }
           },
           "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
-          "updatedAt": "2025-08-07",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -1971,7 +1971,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年各县区错峰安排，以市教育局通知为准"
             },
             "winter": {
               "start": "2026-02-07",
@@ -1980,7 +1980,7 @@
             }
           },
           "source": "https://fjnews.fjsen.com/2025-08/07/content_32011866.htm",
-          "updatedAt": "2025-08-07",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         }
       ]
@@ -2155,7 +2155,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "淄博等试点秋假，济南待公布"
+              "note": "2026年秋假由各区县确定（多数区为11月4—6日或11月上旬）"
             },
             "winter": {
               "start": "2026-02-03",
@@ -2163,8 +2163,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://jnedu.jinan.gov.cn/col/col48443/art/2026/art_c51ee7a983544aac917004d8d4dad89b.html",
-          "updatedAt": "2026-06-18",
+          "source": "https://www.thepaper.cn/newsDetail_forward_34368996",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -2181,9 +2181,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2026 秋假待市级方案"
+              "start": "2026-11-05",
+              "end": "2026-11-09",
+              "note": "2026年秋假5天（已与周末衔接安排）"
             },
             "winter": {
               "start": "2026-02-03",
@@ -2192,7 +2192,7 @@
             }
           },
           "source": "http://edu.qingdao.gov.cn/tzgg/202506/t20250610_9645107.shtml",
-          "updatedAt": "2025-06-10",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -2201,7 +2201,7 @@
             "spring": {
               "start": null,
               "end": null,
-              "note": "以市通知为准"
+              "note": "2026年春假4月30日及5月6—7日"
             },
             "summer": {
               "start": "2026-07-04",
@@ -2209,9 +2209,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": "2025-11-06",
-              "end": "2025-11-10",
-              "note": "2025 年秋假试点（含周末连休）"
+              "start": "2026-11-06",
+              "end": "2026-11-10",
+              "note": "2026年秋假为11月6、9、10日三天，与11月7—8日周末连休共5天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -2219,9 +2219,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.qtv.com.cn/system/2026/06/18/016158995.shtml",
-          "updatedAt": "2026-06-18",
-          "illustrative": true
+          "source": "http://www.sd.xinhuanet.com/20261105/1f92ac0528c748109be379d44f430101/c.html",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "潍坊市",
@@ -2237,9 +2237,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "临沂等试点秋假，以市通知为准"
+              "start": "2026-11-06",
+              "end": "2026-11-10",
+              "note": "2026年秋假为11月6、9—10日，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-04",
@@ -2247,9 +2247,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://sd.news.cn/20251217/d14ad12d52f142ecb534250ff14a2bdb/c.html",
-          "updatedAt": "2025-12-17",
-          "illustrative": true
+          "source": "https://www.bjnews.com.cn/detail/1788861233019667.html",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "临沂市",
@@ -2265,9 +2265,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "临沂等试点秋假，以市通知为准"
+              "start": "2026-11-13",
+              "end": "2026-11-17",
+              "note": "2026年秋假为11月13、16、17日，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-04",
@@ -2275,9 +2275,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://sd.news.cn/20251217/d14ad12d52f142ecb534250ff14a2bdb/c.html",
-          "updatedAt": "2025-12-17",
-          "illustrative": true
+          "source": "https://www.linyi.gov.cn/info/6418/503099.htm",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         }
       ]
     },
@@ -2467,9 +2467,9 @@
           "name": "恩施土家族苗族自治州",
           "breaks": {
             "spring": {
-              "start": "2026-04-01",
-              "end": "2026-04-07",
-              "note": "州内春秋假不少于 1 周（示意）"
+              "start": null,
+              "end": null,
+              "note": "春假不少于1周，2026年各县市自定并与周末/短假衔接"
             },
             "summer": {
               "start": "2026-07-11",
@@ -2477,9 +2477,9 @@
               "note": "结束日待秋季校历全文公布"
             },
             "autumn": {
-              "start": "2026-10-01",
-              "end": "2026-10-07",
-              "note": "春秋假制度"
+              "start": null,
+              "end": null,
+              "note": "全州义务教育秋假不少于1周，2026年各县市自定（例：咸丰县10月28—30日）；非国庆法定假"
             },
             "winter": {
               "start": "2026-01-31",
@@ -2487,9 +2487,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://news.cctv.cn/2025/09/17/ARTIesQxYmQzgn50K4LfJAPA250917.shtml",
-          "updatedAt": "2025-09-17",
-          "illustrative": true
+          "source": "https://feng.ifeng.com/c/8xULd4M7i9H",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "襄阳市",
@@ -2617,7 +2617,7 @@
             "spring": {
               "start": null,
               "end": null,
-              "note": "以市校历为准"
+              "note": "2027年春假为4月2日、4月6日（2026年春假以正式校历为准）"
             },
             "summer": {
               "start": "2026-07-12",
@@ -2625,9 +2625,9 @@
               "note": "普通中小学、职校"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市校历为准"
+              "start": "2026-11-12",
+              "end": "2026-11-16",
+              "note": "2026年秋假为11月12、13、16日三天，与周末衔接"
             },
             "winter": {
               "start": "2026-02-01",
@@ -2635,8 +2635,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://edu.rednet.cn/content/646954/57/15348356.html",
-          "updatedAt": "2025-10-13",
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
           "illustrative": false
         },
         {
@@ -2653,9 +2653,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-16",
+              "end": "2026-11-18",
+              "note": "2026年秋假1—9年级，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-01",
@@ -2663,9 +2663,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.hnedutv.com/content/14489520",
-          "updatedAt": "2025-08-18",
-          "illustrative": true
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "衡阳市",
@@ -2681,9 +2681,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "2026年义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-02-01",
@@ -2691,9 +2691,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.hnedutv.com/content/14489520",
-          "updatedAt": "2025-08-18",
-          "illustrative": true
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "岳阳市",
@@ -2709,9 +2709,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "2026年秋假，与周末衔接"
             },
             "winter": {
               "start": "2026-02-01",
@@ -2719,9 +2719,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.hnedutv.com/content/14489520",
-          "updatedAt": "2025-08-18",
-          "illustrative": true
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "常德市",
@@ -2739,7 +2739,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "以市州校历为准"
+              "note": "2026年秋假以市教育局公布为准（湖南多市已实行）"
             },
             "winter": {
               "start": "2026-02-01",
@@ -2747,8 +2747,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.hnedutv.com/content/14489520",
-          "updatedAt": "2025-08-18",
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         }
       ]
@@ -2793,7 +2793,7 @@
             "spring": {
               "start": null,
               "end": null,
-              "note": "以市校历为准"
+              "note": "2027年春假4月1—2日（2026年春假以市通知为准）"
             },
             "summer": {
               "start": "2026-07-11",
@@ -2801,9 +2801,9 @@
               "note": "结束日待秋季校历全文公布"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "探索中"
+              "start": "2026-11-17",
+              "end": "2026-11-20",
+              "note": "2026年全市义务教育阶段统一秋假4天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -2811,9 +2811,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://static.nfnews.com/content/202510/24/c11845344.html",
-          "updatedAt": "2025-10-24",
-          "illustrative": true
+          "source": "https://www.chinanews.com.cn/edu/2026/10-10/10709987.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "佛山市",
@@ -2829,9 +2829,9 @@
               "note": "结束日待秋季校历全文公布"
             },
             "autumn": {
-              "start": "2025-11-12",
-              "end": "2025-11-14",
-              "note": "秋假试点（参考 2025 年秋季安排）"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "2026年义务教育秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -2839,9 +2839,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://static.nfnews.com/content/202508/16/c11628864.html",
-          "updatedAt": "2025-08-16",
-          "illustrative": true
+          "source": "https://www.chinanews.com/sh/2026/10-24/10720330.shtml",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "东莞市",
@@ -3069,9 +3069,9 @@
               "note": "结束日待秋季校历全文公布"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "探索中"
+              "start": "2026-11-18",
+              "end": "2026-11-22",
+              "note": "2026年秋假连休5天（市县差异大，以本市通知为准）"
             },
             "winter": {
               "start": "2026-01-17",
@@ -3080,8 +3080,8 @@
             }
           },
           "source": "http://news.hainan.net/edu/2026/01/06/4800867.shtml",
-          "updatedAt": "2026-01-06",
-          "illustrative": false
+          "updatedAt": "2026-11-09",
+          "illustrative": true
         },
         {
           "name": "三亚市",
@@ -3209,7 +3209,7 @@
             "spring": {
               "start": null,
               "end": null,
-              "note": "暂无统一春假"
+              "note": "2026年起探索春秋假，春假由区县确定"
             },
             "summer": {
               "start": "2026-07-02",
@@ -3219,7 +3219,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "暂无统一秋假"
+              "note": "2026年起探索春秋假，11月每次2—3天，区县/学校确定具体日期"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3228,8 +3228,8 @@
             }
           },
           "source": "https://jw.cq.gov.cn/zwxx_209/gggs/202506/t20250625_14744176.html",
-          "updatedAt": "2025-06-25",
-          "illustrative": false
+          "updatedAt": "2026-11-09",
+          "illustrative": true
         }
       ]
     },
@@ -3255,7 +3255,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "自贡、宜宾等试点 2—3 天"
+              "note": "2026年秋假3天，由各区（市）县在11月第二周后确定并与周末连休"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3263,8 +3263,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://cd.bendibao.com/edu/202574/199445.shtm",
-          "updatedAt": "2025-07-04",
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         },
         {
@@ -3281,9 +3281,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "2026年秋假第三周后3天，与周末连休共5天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3291,9 +3291,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
-          "updatedAt": "2025-07-04",
-          "illustrative": true
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "南充市",
@@ -3309,9 +3309,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-04",
+              "end": "2026-11-06",
+              "note": "2026年秋假3天，高三毕业年级除外"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3319,9 +3319,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
-          "updatedAt": "2025-07-04",
-          "illustrative": true
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "宜宾市",
@@ -3337,9 +3337,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "部分区县春秋假试点"
+              "start": "2026-11-18",
+              "end": "2026-11-20",
+              "note": "中心城区第一批11月18—20日；部分县市11月23—25日"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3347,9 +3347,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
-          "updatedAt": "2025-07-04",
-          "illustrative": true
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "泸州市",
@@ -3365,9 +3365,9 @@
               "note": "义务教育"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "以市州校历为准"
+              "start": "2026-11-11",
+              "end": "2026-11-13",
+              "note": "2026年幼儿园、一至八年级秋假，与周末连休共5天"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3375,9 +3375,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.chuannan.net/zixun/219980.html",
-          "updatedAt": "2025-06-26",
-          "illustrative": true
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
+          "illustrative": false
         },
         {
           "name": "德阳市",
@@ -3395,7 +3395,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "以市州校历为准"
+              "note": "2026年分两批：11月18—20日或11月25—27日，按属地确定"
             },
             "winter": {
               "start": "2026-01-31",
@@ -3403,8 +3403,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://view.inews.qq.com/a/20250704A08H7F00",
-          "updatedAt": "2025-07-04",
+          "source": "https://cbgc.scol.com.cn/news/7953501",
+          "updatedAt": "2026-11-09",
           "illustrative": true
         }
       ]
@@ -3431,7 +3431,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "尚未全省推行"
+              "note": "省级指导意见：2026年秋假原则上3天，11月中旬由市县确定"
             },
             "winter": {
               "start": "2026-01-24",
@@ -3440,8 +3440,8 @@
             }
           },
           "source": "https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html",
-          "updatedAt": "2025-06-12",
-          "illustrative": false
+          "updatedAt": "2026-11-09",
+          "illustrative": true
         },
         {
           "name": "遵义市",
@@ -3459,7 +3459,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年秋假原则上11月中旬3天，以市州通知为准"
             },
             "winter": {
               "start": "2026-01-24",
@@ -3487,7 +3487,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年秋假原则上11月中旬3天，以市州通知为准"
             },
             "winter": {
               "start": "2026-01-24",
@@ -3515,7 +3515,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年秋假原则上11月中旬3天，以市州通知为准"
             },
             "winter": {
               "start": "2026-01-24",
@@ -3543,7 +3543,7 @@
             "autumn": {
               "start": null,
               "end": null,
-              "note": "探索中"
+              "note": "2026年秋假原则上11月中旬3天，以市州通知为准"
             },
             "winter": {
               "start": "2026-01-24",
