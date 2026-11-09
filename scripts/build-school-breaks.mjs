@@ -12,6 +12,9 @@ const outPath = join(root, 'public/data/school-breaks.json')
 
 const NULL_SEASON = (note) => ({ start: null, end: null, note })
 
+/** 2026 年秋季学期秋假（义务教育为主）；分段假用首尾日覆盖并于 note 说明 */
+const AB = (start, end, note) => ({ start, end, note })
+
 function breaks({ spring, summer, autumn, winter }) {
   return {
     spring: spring ?? NULL_SEASON('暂无统一春假安排'),
@@ -98,9 +101,11 @@ const provinces = [
         winter: ['2026-01-28', '2026-03-02'],
         summer: summerJul4,
         spring: NULL_SEASON('省里探索春秋假，各市错峰安排'),
-        autumn: NULL_SEASON('省里探索春秋假，各市错峰安排'),
+        autumn: NULL_SEASON(
+          '2026 年邯郸、邢台等市已公布秋假（如 9 月 28—30 日或 11 月），全省无统一日期',
+        ),
         source: 'https://hbxw.hebnews.cn/news/583610.html',
-        updatedAt: '2026-01-30',
+        updatedAt: '2026-11-09',
         illustrative: true,
       }
       return ['石家庄市', '唐山市', '保定市', '邯郸市', '廊坊市'].map((n) => fromTemplate(n, tpl))
@@ -121,7 +126,17 @@ const provinces = [
         updatedAt: '2025-08-16',
         illustrative: true,
       }
-      return ['太原市', '大同市', '运城市', '临汾市', '长治市'].map((n) => fromTemplate(n, tpl))
+      return ['太原市', '大同市', '运城市', '临汾市', '长治市'].map((n) => {
+        const autumnOverrides = {
+          太原市: AB('2026-11-11', '2026-11-13', '原则上为11月第二个周三至周五（2026年）'),
+          运城市: AB(
+            '2026-11-05',
+            '2026-11-09',
+            '2026年秋假为11月5日、6日、9日三天，与周末衔接约5天',
+          ),
+        }
+        return fromTemplate(n, tpl, { autumn: autumnOverrides[n] ?? tpl.autumn })
+      })
     })(),
   },
   {
@@ -140,8 +155,16 @@ const provinces = [
         illustrative: true,
         winterNote: '参照北方省份常见安排，以盟市通知为准',
       }
+      const nmAutumn = {
+        呼和浩特市: AB(
+          '2026-11-30',
+          '2026-12-02',
+          '2026年秋假3天，与11月28—29日周末衔接；初三、高三一般不安排',
+        ),
+        赤峰市: AB('2026-11-28', '2026-12-02', '义务教育秋假，与周末衔接约5天'),
+      }
       return ['呼和浩特市', '包头市', '鄂尔多斯市', '赤峰市', '呼伦贝尔市'].map((n) =>
-        fromTemplate(n, tpl),
+        fromTemplate(n, tpl, { autumn: nmAutumn[n] ?? tpl.autumn }),
       )
     })(),
   },
@@ -155,19 +178,26 @@ const provinces = [
         winter: ['2026-01-15', '2026-03-01'],
         summer: { start: '2026-07-15', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('暂无统一春假'),
-        autumn: NULL_SEASON('暂无统一秋假'),
+        autumn: AB(
+          '2026-10-29',
+          '2026-11-02',
+          '2026年秋假含10月29—30日、11月2日等工作日，与周末衔接约5天',
+        ),
         source: 'https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html',
-        updatedAt: '2025-08-27',
-        illustrative: false,
+        updatedAt: '2026-11-09',
+        illustrative: true,
       }),
       ...['大连市', '鞍山市', '锦州市', '抚顺市'].map((n) =>
         fromTemplate(n, {
           winter: ['2026-01-20', '2026-03-01'],
           summer: { start: '2026-07-15', end: '2026-08-31', note: '义务教育' },
           spring: NULL_SEASON('以市校历为准'),
-          autumn: NULL_SEASON('以市校历为准'),
+          autumn:
+            n === '大连市'
+              ? AB('2026-10-30', '2026-11-03', '2026年秋假，与周末衔接约5天')
+              : AB('2026-10-30', '2026-11-04', '2026年秋假多在10月底至11月初，与周末连休'),
           source: 'https://jyj.shenyang.gov.cn/jyyw/202508/t20250827_4895583.html',
-          updatedAt: '2025-08-27',
+          updatedAt: '2026-11-09',
           illustrative: true,
           winterNote: '参照省内框架，具体以市教育局为准',
         }),
@@ -234,13 +264,28 @@ const provinces = [
     mapName: '江苏省',
     svgName: 'Jiangsu',
     cities: (() => {
+      const jsAutumn = {
+        南京市: AB('2026-11-16', '2026-11-18', '全省推行春秋假，与11月14—15日周末连休共5天'),
+        无锡市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        徐州市: AB('2026-11-18', '2026-11-20', '部分区县实行，与周末连休共5天'),
+        常州市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        苏州市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        南通市: AB('2026-11-26', '2026-11-30', '与周末连休共5天（含11月28—29日）'),
+        扬州市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        镇江市: AB('2026-11-26', '2026-11-30', '秋假含11月26、27、30日，与周末衔接'),
+        泰州市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        盐城市: AB('2026-11-16', '2026-11-18', '义务教育秋假，与周末连休共5天'),
+        淮安市: AB('2026-11-18', '2026-11-20', '部分区县实行，与周末连休共5天'),
+        连云港市: AB('2026-11-18', '2026-11-20', '部分区县实行，与周末连休共5天'),
+        宿迁市: AB('2026-11-14', '2026-11-18', '秋假与双休日连休共5天'),
+      }
       const jsWinter = {
         winter: ['2026-02-07', '2026-03-04'],
         summer: { start: '2026-07-05', end: null, note: '结束日待各市秋季通知（省内第二学期校历尚未全省统一发文）' },
         spring: NULL_SEASON('全省未统一春假；南京等地偶有学期中活动假'),
         autumn: NULL_SEASON('全省未统一秋假'),
         source: 'http://js.news.cn/20260128/4a3d8ca67cfd49949789d126bc5f6c9c/c.html',
-        updatedAt: '2026-01-28',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }
       const cities = [
@@ -263,15 +308,19 @@ const provinces = [
           n === '南京市'
             ? {
                 source: 'https://edu.nanjing.gov.cn/xwdt/yw/202602/t20260226_5796293.html',
-                updatedAt: '2026-02-26',
+                updatedAt: '2026-11-09',
+                illustrative: false,
               }
             : n === '连云港市'
               ? {
                   source: 'https://www.lyg.gov.cn/zglygzfmhwz/rdhy/content/d36d64d1-67e8-4f16-a255-694e53d2b2b4.shtml',
-                  updatedAt: '2025-10-21',
+                  updatedAt: '2026-11-09',
                 }
-              : {}
-        return fromTemplate(n, jsWinter, extra)
+              : { updatedAt: '2026-11-09' }
+        return fromTemplate(n, jsWinter, {
+          ...extra,
+          autumn: jsAutumn[n],
+        })
       })
     })(),
   },
@@ -285,100 +334,110 @@ const provinces = [
         winter: ['2026-02-07', '2026-03-04'],
         summer: { start: '2026-07-04', end: null, note: '杭州惯例，结束日待确认' },
         spring: { start: '2026-04-03', end: '2026-04-05', note: '春秋假制度（区县可微调）' },
-        autumn: { start: '2025-09-29', end: '2025-09-30', note: '2025 学年秋假（拱墅区示例，与国庆衔接）' },
-        source: 'https://edu.hangzhou.com.cn/xxdt/content/2025-09/04/content_9075955.htm',
-        updatedAt: '2025-09-04',
-        illustrative: true,
+        autumn: AB(
+          '2026-09-28',
+          '2026-09-30',
+          '主城区2026年秋假，与中秋国庆衔接可连休；三县一市多为11月12、13、16日',
+        ),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('宁波市', {
         winter: ['2026-02-07', '2026-03-03'],
         summer: { start: '2026-07-05', end: '2026-08-31', note: '义务教育' },
-        spring: NULL_SEASON('春秋假各约 3 天，2026 年春假日期另文公布'),
-        autumn: { start: '2025-11-12', end: '2025-11-14', note: '全市春秋假制度（2025 秋假）' },
-        source: 'https://www.ncmc.nbtv.cn/xwdsg/nb/40294031.shtml',
-        updatedAt: '2025-07-03',
+        spring: NULL_SEASON('春秋假各约 3 天，2027 年春假另文公布'),
+        autumn: AB('2026-11-25', '2026-11-27', '2026年全市统一秋假，与周末连休共5天'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }),
       city('温州市', {
         winter: ['2026-02-07', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假各约 3 天，市级弹性安排'),
-        autumn: NULL_SEASON('秋假 11 月前后，以县市区通知为准'),
-        source: 'https://zj.ifeng.com/c/8puLa8mZiEy',
-        updatedAt: '2026-01-15',
-        illustrative: true,
+        autumn: NULL_SEASON(
+          '2026年各县市区分两批：11月11—13日或11月16—18日，具体以县市区通知为准',
+        ),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('嘉兴市', {
         winter: ['2026-02-07', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度，春假多与五一衔接'),
-        autumn: { start: '2025-11-12', end: '2025-11-14', note: '南湖区 2025 秋假示例' },
-        source: 'https://zj.ifeng.com/c/8puLa8mZiEy',
-        updatedAt: '2026-01-15',
-        illustrative: true,
+        autumn: AB('2026-11-11', '2026-11-13', '2026年全市统一秋假3天'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('湖州市', {
         winter: ['2026-02-07', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度'),
-        autumn: { start: '2025-11-12', end: '2025-11-14', note: '德清县 2025 秋假示例' },
-        source: 'https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml',
-        updatedAt: '2025-10-11',
-        illustrative: true,
+        autumn: AB(
+          '2026-11-12',
+          '2026-11-16',
+          '2026年秋假为11月12、13、16日（分段），与周末衔接',
+        ),
+        source: 'https://epaper.zjjyzx.com.cn/html/2026-09/08/content_155847_3818335.htm',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('绍兴市', {
         winter: ['2026-02-08', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度'),
-        autumn: NULL_SEASON('秋假 10—11 月，以县市方案为准'),
-        source: 'https://zj.ifeng.com/c/8puLa8mZiEy',
-        updatedAt: '2026-01-15',
-        illustrative: true,
+        autumn: NULL_SEASON('2026年分三批：11月11—13日、16—18日或13/16/17日，区县不同'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('金华市', {
         winter: ['2026-02-09', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('初三年级不安排春假'),
-        autumn: { start: '2025-11-21', end: '2025-11-23', note: '市区 2025 秋假含周末连休示例' },
-        source: 'https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml',
-        updatedAt: '2025-10-11',
-        illustrative: true,
+        autumn: AB('2026-11-13', '2026-11-17', '2026年秋假为11月13、16、17日，与周末连休'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('衢州市', {
         winter: ['2026-02-07', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度'),
-        autumn: { start: '2025-11-19', end: '2025-11-21', note: '2025 年秋假暂定' },
-        source: 'https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml',
-        updatedAt: '2025-10-11',
-        illustrative: true,
+        autumn: AB('2026-11-18', '2026-11-20', '2026年全市统一秋假3天'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('舟山市', {
         winter: ['2026-02-08', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度'),
-        autumn: { start: '2025-11-19', end: '2025-11-21', note: '2025 年秋假暂定' },
-        source: 'https://news.cctv.cn/2025/10/11/ARTIcRWrnx9BWEDQGAlIhFVH251011.shtml',
-        updatedAt: '2025-10-11',
-        illustrative: true,
+        autumn: AB('2026-11-18', '2026-11-20', '2026年秋假3天；区县可参照或自主安排'),
+        source: 'https://www.cztv.com/newsDetail/894841',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('台州市', {
         winter: ['2026-02-10', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假 3 天，县市区确定'),
-        autumn: NULL_SEASON('春秋假 3 天，县市区确定'),
-        source: 'https://zj.ifeng.com/c/8puLa8mZiEy',
-        updatedAt: '2026-01-15',
-        illustrative: true,
+        autumn: AB('2026-11-11', '2026-11-13', '2026年全市统一秋假3天'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('丽水市', {
         winter: ['2026-02-07', '2026-03-04'],
         summer: { start: '2026-07-05', end: null, note: '3 月 5 日正式上课' },
         spring: NULL_SEASON('春假 2—3 天，可与五一连休'),
-        autumn: NULL_SEASON('秋假 11 月，县市区部署'),
-        source: 'https://zj.ifeng.com/c/8puLa8mZiEy',
-        updatedAt: '2026-01-15',
-        illustrative: true,
+        autumn: AB('2026-11-09', '2026-11-11', '2026年全市统一秋假3天'),
+        source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
     ],
   },
@@ -401,10 +460,14 @@ const provinces = [
         winter: ['2026-02-06', '2026-03-01'],
         summer: { start: '2026-07-01', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('以市校历为准'),
-        autumn: NULL_SEASON('以市校历为准'),
+        autumn: AB(
+          '2026-11-19',
+          '2026-11-23',
+          '2026年秋假含11月19、20、23日，与周末连休共5天',
+        ),
         source: 'https://jyj.wuhu.gov.cn/openness/public/6596321/40159645.html',
-        updatedAt: '2025-07-21',
-        illustrative: false,
+        updatedAt: '2026-11-09',
+        illustrative: true,
       }),
       ...['蚌埠市', '阜阳市', '安庆市'].map((n) =>
         fromTemplate(n, {
@@ -429,9 +492,9 @@ const provinces = [
         winter: ['2026-01-31', '2026-02-25'],
         summer: { start: '2026-07-04', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('以闽教办基〔2025〕11 号及市通知为准'),
-        autumn: NULL_SEASON('探索中'),
-        source: 'https://jyj.fuzhou.gov.cn/zwgk/tzgg/202506/t20250613_5033399.htm',
-        updatedAt: '2025-06-13',
+        autumn: NULL_SEASON('2026年区县错峰：多数区11月18—20日，长乐/马尾11月23—25日，福清11月16—18日'),
+        source: 'https://www.chinanews.com.cn/edu/2026/10-10/10709987.shtml',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }),
       ...['厦门市', '泉州市', '漳州市', '龙岩市'].map((n) =>
@@ -439,10 +502,13 @@ const provinces = [
           winter: ['2026-02-07', '2026-03-03'],
           summer: { start: '2026-07-03', end: '2026-08-31', note: '义务教育' },
           spring: NULL_SEASON('省厅框架下以市通知为准'),
-          autumn: NULL_SEASON('探索中'),
+          autumn:
+            n === '厦门市'
+              ? AB('2026-11-25', '2026-11-27', '2026年秋假，与周末连休共5天')
+              : NULL_SEASON('2026年各县区错峰安排，以市教育局通知为准'),
           source: 'https://fjnews.fjsen.com/2025-08/07/content_32011866.htm',
-          updatedAt: '2025-08-07',
-          illustrative: true,
+          updatedAt: '2026-11-09',
+          illustrative: n !== '厦门市',
         }),
       ),
     ],
@@ -475,38 +541,48 @@ const provinces = [
         winter: ['2026-02-03', '2026-03-03'],
         summer: { start: '2026-07-04', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('部分地市探索春秋假'),
-        autumn: NULL_SEASON('淄博等试点秋假，济南待公布'),
-        source: 'https://jnedu.jinan.gov.cn/col/col48443/art/2026/art_c51ee7a983544aac917004d8d4dad89b.html',
-        updatedAt: '2026-06-18',
+        autumn: NULL_SEASON('2026年秋假由各区县确定（多数区为11月4—6日或11月上旬）'),
+        source: 'https://www.thepaper.cn/newsDetail_forward_34368996',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }),
       city('青岛市', {
         winter: ['2026-02-03', '2026-03-03'],
         summer: { start: '2026-07-06', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('以市通知为准'),
-        autumn: NULL_SEASON('2026 秋假待市级方案'),
+        autumn: AB('2026-11-05', '2026-11-09', '2026年秋假5天（已与周末衔接安排）'),
         source: 'http://edu.qingdao.gov.cn/tzgg/202506/t20250610_9645107.shtml',
-        updatedAt: '2025-06-10',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }),
       city('烟台市', {
         winter: ['2026-01-31', '2026-03-04'],
         summer: { start: '2026-07-04', end: '2026-08-31', note: '义务教育' },
-        spring: NULL_SEASON('以市通知为准'),
-        autumn: { start: '2025-11-06', end: '2025-11-10', note: '2025 年秋假试点（含周末连休）' },
-        source: 'https://news.qtv.com.cn/system/2026/06/18/016158995.shtml',
-        updatedAt: '2026-06-18',
-        illustrative: true,
+        spring: NULL_SEASON('2026年春假4月30日及5月6—7日'),
+        autumn: AB(
+          '2026-11-06',
+          '2026-11-10',
+          '2026年秋假为11月6、9、10日三天，与11月7—8日周末连休共5天',
+        ),
+        source: 'http://www.sd.xinhuanet.com/20261105/1f92ac0528c748109be379d44f430101/c.html',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       ...['潍坊市', '临沂市'].map((n) =>
         fromTemplate(n, {
           winter: ['2026-02-04', '2026-03-04'],
           summer: { start: '2026-07-06', end: '2026-08-31', note: '义务教育' },
           spring: NULL_SEASON('部分地市探索春秋假'),
-          autumn: NULL_SEASON('临沂等试点秋假，以市通知为准'),
-          source: 'http://sd.news.cn/20251217/d14ad12d52f142ecb534250ff14a2bdb/c.html',
-          updatedAt: '2025-12-17',
-          illustrative: true,
+          autumn:
+            n === '临沂市'
+              ? AB('2026-11-13', '2026-11-17', '2026年秋假为11月13、16、17日，与周末连休共5天')
+              : AB('2026-11-06', '2026-11-10', '2026年秋假为11月6、9—10日，与周末连休共5天'),
+          source:
+            n === '临沂市'
+              ? 'https://www.linyi.gov.cn/info/6418/503099.htm'
+              : 'https://www.bjnews.com.cn/detail/1788861233019667.html',
+          updatedAt: '2026-11-09',
+          illustrative: false,
         }),
       ),
     ],
@@ -557,11 +633,13 @@ const provinces = [
       city('恩施土家族苗族自治州', {
         winter: ['2026-01-31', '2026-03-04'],
         summer: summerJul11,
-        spring: { start: '2026-04-01', end: '2026-04-07', note: '州内春秋假不少于 1 周（示意）' },
-        autumn: { start: '2026-10-01', end: '2026-10-07', note: '春秋假制度' },
-        source: 'https://news.cctv.cn/2025/09/17/ARTIesQxYmQzgn50K4LfJAPA250917.shtml',
-        updatedAt: '2025-09-17',
-        illustrative: true,
+        spring: NULL_SEASON('春假不少于1周，2026年各县市自定并与周末/短假衔接'),
+        autumn: NULL_SEASON(
+          '全州义务教育秋假不少于1周，2026年各县市自定（例：咸丰县10月28—30日）；非国庆法定假',
+        ),
+        source: 'https://feng.ifeng.com/c/8xULd4M7i9H',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       ...['襄阳市', '宜昌市', '黄石市', '荆州市'].map((n) =>
         fromTemplate(n, {
@@ -585,23 +663,33 @@ const provinces = [
       city('长沙市', {
         winter: ['2026-02-01', '2026-03-03'],
         summer: { start: '2026-07-12', end: '2026-08-29', note: '普通中小学、职校' },
-        spring: NULL_SEASON('以市校历为准'),
-        autumn: NULL_SEASON('以市校历为准'),
-        source: 'https://edu.rednet.cn/content/646954/57/15348356.html',
-        updatedAt: '2025-10-13',
+        spring: NULL_SEASON('2027年春假为4月2日、4月6日（2026年春假以正式校历为准）'),
+        autumn: AB(
+          '2026-11-12',
+          '2026-11-16',
+          '2026年秋假为11月12、13、16日三天，与周末衔接',
+        ),
+        source: 'https://www.chinanews.com/sh/2026/10-24/10720330.shtml',
+        updatedAt: '2026-11-09',
         illustrative: false,
       }),
-      ...['株洲市', '衡阳市', '岳阳市', '常德市'].map((n) =>
-        fromTemplate(n, {
+      ...['株洲市', '衡阳市', '岳阳市', '常德市'].map((n) => {
+        const hnAutumn = {
+          株洲市: AB('2026-11-16', '2026-11-18', '2026年秋假1—9年级，与周末连休共5天'),
+          衡阳市: AB('2026-11-11', '2026-11-13', '2026年义务教育秋假，与周末连休共5天'),
+          岳阳市: AB('2026-11-18', '2026-11-20', '2026年秋假，与周末衔接'),
+          常德市: NULL_SEASON('2026年秋假以市教育局公布为准（湖南多市已实行）'),
+        }
+        return fromTemplate(n, {
           winter: ['2026-02-01', '2026-03-03'],
           summer: { start: '2026-07-12', end: '2026-08-29', note: '义务教育' },
           spring: NULL_SEASON('以市州校历为准'),
-          autumn: NULL_SEASON('以市州校历为准'),
-          source: 'https://www.hnedutv.com/content/14489520',
-          updatedAt: '2025-08-18',
-          illustrative: true,
-        }),
-      ),
+          autumn: hnAutumn[n] ?? NULL_SEASON('以市州校历为准'),
+          source: 'https://www.chinanews.com/sh/2026/10-24/10720330.shtml',
+          updatedAt: '2026-11-09',
+          illustrative: n === '常德市',
+        })
+      }),
     ],
   },
   {
@@ -622,20 +710,20 @@ const provinces = [
       city('深圳市', {
         winter: ['2026-01-31', '2026-03-02'],
         summer: summerJul11,
-        spring: NULL_SEASON('以市校历为准'),
-        autumn: NULL_SEASON('探索中'),
-        source: 'https://static.nfnews.com/content/202510/24/c11845344.html',
-        updatedAt: '2025-10-24',
-        illustrative: true,
+        spring: NULL_SEASON('2027年春假4月1—2日（2026年春假以市通知为准）'),
+        autumn: AB('2026-11-17', '2026-11-20', '2026年全市义务教育阶段统一秋假4天'),
+        source: 'https://www.chinanews.com.cn/edu/2026/10-10/10709987.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('佛山市', {
         winter: ['2026-01-31', '2026-03-02'],
         summer: summerJul11,
         spring: NULL_SEASON('春秋假试点'),
-        autumn: { start: '2025-11-12', end: '2025-11-14', note: '秋假试点（参考 2025 年秋季安排）' },
-        source: 'https://static.nfnews.com/content/202508/16/c11628864.html',
-        updatedAt: '2025-08-16',
-        illustrative: true,
+        autumn: AB('2026-11-11', '2026-11-13', '2026年义务教育秋假，与周末连休共5天'),
+        source: 'https://www.chinanews.com/sh/2026/10-24/10720330.shtml',
+        updatedAt: '2026-11-09',
+        illustrative: false,
       }),
       city('东莞市', {
         winter: ['2026-01-31', '2026-03-02'],
@@ -685,10 +773,10 @@ const provinces = [
         winter: ['2026-01-17', '2026-03-02'],
         summer: summerJul11,
         spring: NULL_SEASON('消费促进方案提及探索，无统一日期'),
-        autumn: NULL_SEASON('探索中'),
+        autumn: AB('2026-11-18', '2026-11-22', '2026年秋假连休5天（市县差异大，以本市通知为准）'),
         source: 'http://news.hainan.net/edu/2026/01/06/4800867.shtml',
-        updatedAt: '2026-01-06',
-        illustrative: false,
+        updatedAt: '2026-11-09',
+        illustrative: true,
       }),
       ...['三亚市', '儋州市', '琼海市', '文昌市'].map((n) =>
         fromTemplate(n, {
@@ -712,11 +800,11 @@ const provinces = [
       city('重庆市', {
         winter: ['2026-01-31', '2026-03-04'],
         summer: { start: '2026-07-02', end: null, note: '义务教育；高中 7 月 9 日起' },
-        spring: NULL_SEASON('暂无统一春假'),
-        autumn: NULL_SEASON('暂无统一秋假'),
+        spring: NULL_SEASON('2026年起探索春秋假，春假由区县确定'),
+        autumn: NULL_SEASON('2026年起探索春秋假，11月每次2—3天，区县/学校确定具体日期'),
         source: 'https://jw.cq.gov.cn/zwxx_209/gggs/202506/t20250625_14744176.html',
-        updatedAt: '2025-06-25',
-        illustrative: false,
+        updatedAt: '2026-11-09',
+        illustrative: true,
       }),
     ],
   },
@@ -730,27 +818,29 @@ const provinces = [
         winter: ['2026-01-31', '2026-03-02'],
         summer: summerJul4,
         spring: NULL_SEASON('市级以省框架执行为主'),
-        autumn: NULL_SEASON('自贡、宜宾等试点 2—3 天'),
-        source: 'https://cd.bendibao.com/edu/202574/199445.shtm',
-        updatedAt: '2025-07-04',
+        autumn: NULL_SEASON('2026年秋假3天，由各区（市）县在11月第二周后确定并与周末连休'),
+        source: 'https://cbgc.scol.com.cn/news/7953501',
+        updatedAt: '2026-11-09',
         illustrative: true,
       }),
-      ...['绵阳市', '南充市', '宜宾市', '泸州市', '德阳市'].map((n) =>
-        fromTemplate(n, {
+      ...['绵阳市', '南充市', '宜宾市', '泸州市', '德阳市'].map((n) => {
+        const scAutumn = {
+          绵阳市: AB('2026-11-18', '2026-11-20', '2026年秋假第三周后3天，与周末连休共5天'),
+          南充市: AB('2026-11-04', '2026-11-06', '2026年秋假3天，高三毕业年级除外'),
+          宜宾市: AB('2026-11-18', '2026-11-20', '中心城区第一批11月18—20日；部分县市11月23—25日'),
+          泸州市: AB('2026-11-11', '2026-11-13', '2026年幼儿园、一至八年级秋假，与周末连休共5天'),
+          德阳市: NULL_SEASON('2026年分两批：11月18—20日或11月25—27日，按属地确定'),
+        }
+        return fromTemplate(n, {
           winter: ['2026-01-31', '2026-03-02'],
           summer: n === '泸州市' ? { start: '2026-07-05', end: null, note: '义务教育' } : summerJul4,
           spring: NULL_SEASON('以市州校历为准'),
-          autumn: ['宜宾市', '自贡市'].includes(n)
-            ? NULL_SEASON('部分区县春秋假试点')
-            : NULL_SEASON('以市州校历为准'),
-          source:
-            n === '泸州市'
-              ? 'https://www.chuannan.net/zixun/219980.html'
-              : 'https://view.inews.qq.com/a/20250704A08H7F00',
-          updatedAt: n === '泸州市' ? '2025-06-26' : '2025-07-04',
-          illustrative: true,
-        }),
-      ),
+          autumn: scAutumn[n] ?? NULL_SEASON('以市州校历为准'),
+          source: 'https://cbgc.scol.com.cn/news/7953501',
+          updatedAt: '2026-11-09',
+          illustrative: n === '德阳市',
+        })
+      }),
     ],
   },
   {
@@ -763,17 +853,17 @@ const provinces = [
         winter: ['2026-01-24', '2026-03-02'],
         summer: summerJul11,
         spring: NULL_SEASON('省级方案探索中，市县不一'),
-        autumn: NULL_SEASON('尚未全省推行'),
+        autumn: NULL_SEASON('省级指导意见：2026年秋假原则上3天，11月中旬由市县确定'),
         source: 'https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html',
-        updatedAt: '2025-06-12',
-        illustrative: false,
+        updatedAt: '2026-11-09',
+        illustrative: true,
       }),
       ...['遵义市', '六盘水市', '毕节市', '黔东南苗族侗族自治州'].map((n) =>
         fromTemplate(n, {
           winter: ['2026-01-24', '2026-03-02'],
           summer: summerJul11,
           spring: NULL_SEASON('以市州校历为准'),
-          autumn: NULL_SEASON('探索中'),
+          autumn: NULL_SEASON('2026年秋假原则上11月中旬3天，以市州通知为准'),
           source: 'https://www.gywb.cn/pages/web/2025/06/12/afff65f17c4f4f57bb67a376de278153.html',
           updatedAt: '2025-06-12',
           illustrative: true,
