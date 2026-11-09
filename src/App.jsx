@@ -75,14 +75,16 @@ export default function App() {
           selectedCode={selectedCode}
           onSelect={handleSelect}
         />
-        <section className="map-section">
-          <ChinaMap
-            provinces={data.provinces}
-            selectedCode={selectedCode}
-            onSelect={handleSelect}
-          />
-        </section>
-        <DetailPanel province={selectedProvince} meta={data.meta} />
+        <div className="content-column">
+          <section className="map-section" aria-label="中国地图">
+            <ChinaMap
+              provinces={data.provinces}
+              selectedCode={selectedCode}
+              onSelect={handleSelect}
+            />
+          </section>
+          <DetailPanel province={selectedProvince} meta={data.meta} />
+        </div>
       </main>
       <footer className="app-footer">
         <p>
