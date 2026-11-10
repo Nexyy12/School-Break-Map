@@ -26,6 +26,9 @@ const NO_SD_SPRING_AUTUMN =
 const NULL_SPRING = { start: null, end: null, note: NO_SPRING_2025 }
 const NULL_AUTUMN = { start: null, end: null, note: NO_AUTUMN_2025 }
 
+const ZJ_AUTUMN_XINHUA =
+  'https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html'
+
 function shiftIso(iso, yearDelta) {
   if (!iso || typeof iso !== 'string') return iso
   const [y, m, d] = iso.split('-').map(Number)
@@ -100,10 +103,10 @@ const CITY_OVERRIDES = {
   },
   杭州市: {
     autumn: {
-      start: '2024-09-28',
-      end: '2024-09-30',
+      start: '2025-09-28',
+      end: '2025-09-30',
       note:
-        '主城区2024年秋假（2024—2025学年第一学期）；在「2025」年视图仍显示该历史公布日期',
+        '2025学年主城区秋假3天（9/28—30，可与国庆连休）；桐庐、淳安、建德错峰为11月10—12日',
     },
     spring: {
       start: '2025-04-04',
@@ -112,17 +115,112 @@ const CITY_OVERRIDES = {
     },
     winter: { start: '2025-01-22', end: '2025-02-12', note: '义务教育' },
     summer: { start: '2025-07-04', end: null, note: '结束日待秋季校历' },
-    source: 'https://www.hzzx.gov.cn/cshz/content/2024-09/04/content_8782808_0.htm',
-    updatedAt: '2024-09-04',
+    source:
+      'https://edu.hangzhou.com.cn/xxdt/content/2025-09/04/content_9075958.htm',
+    updatedAt: '2025-09-04',
     illustrative: false,
   },
   宁波市: {
+    autumn: {
+      start: '2025-11-12',
+      end: '2025-11-14',
+      note: '义务教育秋假3天，与11/15—16周末连休共5天',
+    },
     winter: { start: '2025-01-22', end: '2025-02-12', note: '义务教育' },
     summer: { start: '2025-07-05', end: '2025-08-31', note: '义务教育' },
     spring: { start: null, end: null, note: NO_SPRING_2025 },
-    autumn: { start: null, end: null, note: NO_AUTUMN_2025 },
-    source: 'http://news.cnnb.com.cn/system/2024/06/17/030593478.shtml',
-    updatedAt: '2024-06-17',
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  温州市: {
+    autumn: {
+      start: '2025-11-17',
+      end: '2025-11-19',
+      note: '全市县市区统一，义务教育一至九年级（九年级仅秋假）',
+    },
+    source: 'https://news.66wz.com/system/2025/10/11/105703064.shtml',
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  嘉兴市: {
+    autumn: {
+      start: '2025-11-12',
+      end: '2025-11-14',
+      note: '全市义务段秋假3天，与周末连休共5天',
+    },
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  湖州市: {
+    autumn: {
+      start: '2025-11-12',
+      end: '2025-11-14',
+      note: '全市区县统一意见，义务段一至九年级（九年级仅秋假）',
+    },
+    source: 'https://m.thepaper.cn/newsDetail_forward_31754944',
+    updatedAt: '2025-10-10',
+    illustrative: false,
+  },
+  绍兴市: {
+    autumn: {
+      start: '2025-11-17',
+      end: '2025-11-19',
+      note: '全市6区县（市）义务教育秋假统一安排',
+    },
+    source: 'http://sx.bendibao.com/edu/20251015/32903.shtm',
+    updatedAt: '2025-10-15',
+    illustrative: false,
+  },
+  金华市: {
+    autumn: {
+      start: '2025-11-21',
+      end: '2025-11-25',
+      note: '市区3天含周末连休5日；兰溪等县区错峰为11月12—16日',
+    },
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  衢州市: {
+    autumn: {
+      start: '2025-11-19',
+      end: '2025-11-21',
+      note: '义务教育秋假3天，与周末连休共5天',
+    },
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  舟山市: {
+    autumn: {
+      start: '2025-11-19',
+      end: '2025-11-21',
+      note: '义务教育秋假暂定3天，与周末连休共5天',
+    },
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-11',
+    illustrative: false,
+  },
+  台州市: {
+    autumn: {
+      start: '2025-11-12',
+      end: '2025-11-14',
+      note: '各县市区（含椒江、三门等）2025年秋假统一为3天',
+    },
+    source: ZJ_AUTUMN_XINHUA,
+    updatedAt: '2025-10-10',
+    illustrative: false,
+  },
+  丽水市: {
+    autumn: {
+      start: '2025-11-19',
+      end: '2025-11-21',
+      note: '市教育局推行春秋假，秋假3天与周末连休共5天',
+    },
+    source: 'http://zj.people.com.cn/n2/2025/1101/c186327-41398402.html',
+    updatedAt: '2025-10-23',
     illustrative: false,
   },
   苏州市: {
