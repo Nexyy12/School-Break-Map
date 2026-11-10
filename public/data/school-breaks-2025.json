@@ -1390,9 +1390,9 @@
               "note": "春秋假制度（区县可微调，2025年春假以区县通知为准）"
             },
             "autumn": {
-              "start": "2024-09-28",
-              "end": "2024-09-30",
-              "note": "主城区2024年秋假（2024—2025学年第一学期）；在「2025」年视图仍显示该历史公布日期"
+              "start": "2025-09-28",
+              "end": "2025-09-30",
+              "note": "2025学年主城区秋假3天（9/28—30，可与国庆连休）；桐庐、淳安、建德错峰为11月10—12日"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1405,8 +1405,8 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.hzzx.gov.cn/cshz/content/2024-09/04/content_8782808_0.htm",
-          "updatedAt": "2024-09-04",
+          "source": "https://edu.hangzhou.com.cn/xxdt/content/2025-09/04/content_9075958.htm",
+          "updatedAt": "2025-09-04",
           "illustrative": false
         },
         {
@@ -1418,9 +1418,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "义务教育秋假3天，与11/15—16周末连休共5天"
             },
             "summer": {
               "start": "2025-07-05",
@@ -1433,8 +1433,8 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2024/06/17/030593478.shtml",
-          "updatedAt": "2024-06-17",
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-11",
           "illustrative": false
         },
         {
@@ -1446,9 +1446,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-17",
+              "end": "2025-11-19",
+              "note": "全市县市区统一，义务教育一至九年级（九年级仅秋假）"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1461,9 +1461,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://news.66wz.com/system/2025/10/11/105703064.shtml",
+          "updatedAt": "2025-10-11",
+          "illustrative": false
         },
         {
           "name": "嘉兴市",
@@ -1474,9 +1474,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "全市义务段秋假3天，与周末连休共5天"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1489,9 +1489,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-11",
+          "illustrative": false
         },
         {
           "name": "湖州市",
@@ -1502,9 +1502,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "全市区县统一意见，义务段一至九年级（九年级仅秋假）"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1517,9 +1517,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://epaper.zjjyzx.com.cn/html/2026-09/08/content_155847_3818335.htm",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://m.thepaper.cn/newsDetail_forward_31754944",
+          "updatedAt": "2025-10-10",
+          "illustrative": false
         },
         {
           "name": "绍兴市",
@@ -1530,9 +1530,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-17",
+              "end": "2025-11-19",
+              "note": "全市6区县（市）义务教育秋假统一安排"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1545,9 +1545,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "http://sx.bendibao.com/edu/20251015/32903.shtm",
+          "updatedAt": "2025-10-15",
+          "illustrative": false
         },
         {
           "name": "金华市",
@@ -1558,9 +1558,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-21",
+              "end": "2025-11-25",
+              "note": "市区3天含周末连休5日；兰溪等县区错峰为11月12—16日"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1573,9 +1573,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-11",
+          "illustrative": false
         },
         {
           "name": "衢州市",
@@ -1586,9 +1586,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-19",
+              "end": "2025-11-21",
+              "note": "义务教育秋假3天，与周末连休共5天"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1601,9 +1601,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-11",
+          "illustrative": false
         },
         {
           "name": "舟山市",
@@ -1614,9 +1614,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-19",
+              "end": "2025-11-21",
+              "note": "义务教育秋假暂定3天，与周末连休共5天"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1629,9 +1629,9 @@
               "note": "义务教育"
             }
           },
-          "source": "https://www.cztv.com/newsDetail/894841",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-11",
+          "illustrative": false
         },
         {
           "name": "台州市",
@@ -1642,9 +1642,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-12",
+              "end": "2025-11-14",
+              "note": "各县市区（含椒江、三门等）2025年秋假统一为3天"
             },
             "summer": {
               "start": "2025-07-04",
@@ -1657,9 +1657,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "https://www.news.cn/edu/20251011/a7617103990d48f6917c437401f01a79/c.html",
+          "updatedAt": "2025-10-10",
+          "illustrative": false
         },
         {
           "name": "丽水市",
@@ -1670,9 +1670,9 @@
               "note": "2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）"
             },
             "autumn": {
-              "start": null,
-              "end": null,
-              "note": "2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）"
+              "start": "2025-11-19",
+              "end": "2025-11-21",
+              "note": "市教育局推行春秋假，秋假3天与周末连休共5天"
             },
             "summer": {
               "start": "2025-07-05",
@@ -1685,9 +1685,9 @@
               "note": "义务教育"
             }
           },
-          "source": "http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml",
-          "updatedAt": "2026-11-09",
-          "illustrative": true
+          "source": "http://zj.people.com.cn/n2/2025/1101/c186327-41398402.html",
+          "updatedAt": "2025-10-23",
+          "illustrative": false
         }
       ]
     },
