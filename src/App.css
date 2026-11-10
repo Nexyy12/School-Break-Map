@@ -39,14 +39,27 @@
 
 .app-main {
   flex: 1;
-  display: grid;
-  grid-template-columns: minmax(220px, 268px) 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
   padding: 1.25rem 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+}
+
+.app-main__heatmap {
+  width: 100%;
+  min-width: 0;
+}
+
+.app-main__body {
+  display: grid;
+  grid-template-columns: minmax(220px, 268px) 1fr;
+  gap: 1.25rem;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
 
 .content-column {
@@ -57,7 +70,7 @@
 }
 
 @media (max-width: 900px) {
-  .app-main {
+  .app-main__body {
     grid-template-columns: 1fr;
   }
 }

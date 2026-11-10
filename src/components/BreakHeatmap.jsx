@@ -11,10 +11,8 @@ const BREAK_OPTIONS = ['spring', 'summer', 'autumn', 'winter']
 export default function BreakHeatmap({ provinces }) {
   const [breakKey, setBreakKey] = useState('autumn')
 
-  const { dates, rows, totals, maxCount, rangeStart, rangeEnd } = useMemo(
-    () => buildHeatmapData(breakKey, provinces),
-    [breakKey, provinces],
-  )
+  const { dates, rows, totals, maxCount, rangeStart, rangeEnd, hasVisibleProvinces } =
+    useMemo(() => buildHeatmapData(breakKey, provinces), [breakKey, provinces])
 
   const dateHeaders = useMemo(
     () => dates.map((iso) => ({ iso, ...formatHeatmapDateHeader(iso) })),
@@ -82,23 +80,28 @@ export default function BreakHeatmap({ provinces }) {
                     ))}
                   </tr>
                 ))}
-                <tr className="heatmap-table__total-row">
-                  <th className="heatmap-table__province heatmap-table__total-label" scope="row">
-                    全国合计
-                  </th>
-                  {totals.map((count, i) => (
-                    <td
-                      key={`total-${dates[i]}`}
-                      className="heatmap-table__cell heatmap-table__cell--total"
-                      style={{
-                        backgroundColor:
-                          heatCellBackground(count, maxCount) ?? undefined,
-                      }}
+                {hasVisibleProvinces ? (
+                  <tr className="heatmap-table__total-row">
+                    <th
+                      className="heatmap-table__province heatmap-table__total-label"
+                      scope="row"
                     >
-                      {count > 0 ? count : ''}
-                    </td>
-                  ))}
-                </tr>
+                      全国合计
+                    </th>
+                    {totals.map((count, i) => (
+                      <td
+                        key={`total-${dates[i]}`}
+                        className="heatmap-table__cell heatmap-table__cell--total"
+                        style={{
+                          backgroundColor:
+                            heatCellBackground(count, maxCount) ?? undefined,
+                        }}
+                      >
+                        {count > 0 ? count : ''}
+                      </td>
+                    ))}
+                  </tr>
+                ) : null}
               </tbody>
             </table>
           </div>

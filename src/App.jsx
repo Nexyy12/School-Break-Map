@@ -71,21 +71,25 @@ export default function App() {
         </div>
       </header>
       <main className="app-main">
-        <ProvinceList
-          provinces={data.provinces}
-          selectedCode={selectedCode}
-          onSelect={handleSelect}
-        />
-        <div className="content-column">
+        <div className="app-main__heatmap">
           <BreakHeatmap provinces={data.provinces} />
-          <section className="map-section" aria-label="中国地图">
-            <ChinaMap
-              provinces={data.provinces}
-              selectedCode={selectedCode}
-              onSelect={handleSelect}
-            />
-          </section>
-          <DetailPanel province={selectedProvince} meta={data.meta} />
+        </div>
+        <div className="app-main__body">
+          <ProvinceList
+            provinces={data.provinces}
+            selectedCode={selectedCode}
+            onSelect={handleSelect}
+          />
+          <div className="content-column">
+            <section className="map-section" aria-label="中国地图">
+              <ChinaMap
+                provinces={data.provinces}
+                selectedCode={selectedCode}
+                onSelect={handleSelect}
+              />
+            </section>
+            <DetailPanel province={selectedProvince} meta={data.meta} />
+          </div>
         </div>
       </main>
       <footer className="app-footer">
