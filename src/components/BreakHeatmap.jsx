@@ -15,7 +15,15 @@ export default function BreakHeatmap({
   selectedDate,
   onSelectDate,
 }) {
-  const { dates, rows, totals, maxCount, rangeStart, rangeEnd } = useMemo(
+  const {
+    dates,
+    rows,
+    totals,
+    maxCount,
+    rangeStart,
+    rangeEnd,
+    hasVisibleProvinces,
+  } = useMemo(
     () => buildHeatmapData(breakKey, provinces),
     [breakKey, provinces],
   )
@@ -155,41 +163,43 @@ export default function BreakHeatmap({
                     ))}
                   </tr>
                 ))}
-                <tr className="heatmap-table__total-row">
-                  <th
-                    className="heatmap-table__province heatmap-table__total-label"
-                    scope="row"
-                  >
-                    全国合计
-                  </th>
-                  {totals.map((count, i) => (
-                    <td
-                      key={`total-${dates[i]}`}
-                      className={[
-                        'heatmap-table__cell',
-                        'heatmap-table__cell--total',
-                        count > 0 ? 'heatmap-table__cell--clickable' : '',
-                        columnClass(dates[i]),
-                      ]
-                        .filter(Boolean)
-                        .join(' ')}
-                      style={{
-                        backgroundColor:
-                          heatCellBackground(count, maxCount) ?? undefined,
-                      }}
-                      onClick={
-                        count > 0 ? () => toggleDate(dates[i]) : undefined
-                      }
-                      role={count > 0 ? 'button' : undefined}
-                      tabIndex={count > 0 ? 0 : undefined}
-                      aria-pressed={
-                        count > 0 ? selectedDate === dates[i] : undefined
-                      }
+                {hasVisibleProvinces ? (
+                  <tr className="heatmap-table__total-row">
+                    <th
+                      className="heatmap-table__province heatmap-table__total-label"
+                      scope="row"
                     >
-                      {count > 0 ? count : ''}
-                    </td>
-                  ))}
-                </tr>
+                      全国合计
+                    </th>
+                    {totals.map((count, i) => (
+                      <td
+                        key={`total-${dates[i]}`}
+                        className={[
+                          'heatmap-table__cell',
+                          'heatmap-table__cell--total',
+                          count > 0 ? 'heatmap-table__cell--clickable' : '',
+                          columnClass(dates[i]),
+                        ]
+                          .filter(Boolean)
+                          .join(' ')}
+                        style={{
+                          backgroundColor:
+                            heatCellBackground(count, maxCount) ?? undefined,
+                        }}
+                        onClick={
+                          count > 0 ? () => toggleDate(dates[i]) : undefined
+                        }
+                        role={count > 0 ? 'button' : undefined}
+                        tabIndex={count > 0 ? 0 : undefined}
+                        aria-pressed={
+                          count > 0 ? selectedDate === dates[i] : undefined
+                        }
+                      >
+                        {count > 0 ? count : ''}
+                      </td>
+                    ))}
+                  </tr>
+                ) : null}
               </tbody>
             </table>
           </div>

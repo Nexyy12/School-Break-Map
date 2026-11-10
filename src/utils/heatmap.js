@@ -97,8 +97,10 @@ export function buildHeatmapData(breakKey, provinces) {
     rows.reduce((sum, row) => sum + row.counts[col], 0),
   )
 
+  const visibleRows = rows.filter((row) => row.counts.some((c) => c > 0))
+
   let maxCount = 0
-  for (const row of rows) {
+  for (const row of visibleRows) {
     for (const c of row.counts) {
       if (c > maxCount) maxCount = c
     }
@@ -110,11 +112,12 @@ export function buildHeatmapData(breakKey, provinces) {
   return {
     breakKey,
     dates,
-    rows,
+    rows: visibleRows,
     totals,
     maxCount,
     rangeStart,
     rangeEnd,
+    hasVisibleProvinces: visibleRows.length > 0,
   }
 }
 
