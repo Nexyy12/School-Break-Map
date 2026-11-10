@@ -15,6 +15,15 @@ const NULL_SEASON = (note) => ({ start: null, end: null, note })
 /** 2026 年秋季学期秋假（义务教育为主）；分段假用首尾日覆盖并于 note 说明 */
 const AB = (start, end, note) => ({ start, end, note })
 
+/** 多批次/区县错峰：卡片仍显示 —，热力图合并 ranges（含周末延伸） */
+const UNCERTAIN_SEASON = (note, ranges) => ({
+  start: null,
+  end: null,
+  note,
+  ranges,
+  uncertain: true,
+})
+
 function breaks({ spring, summer, autumn, winter }) {
   return {
     spring: spring ?? NULL_SEASON('暂无统一春假安排'),
@@ -334,11 +343,15 @@ const provinces = [
         winter: ['2026-02-07', '2026-03-04'],
         summer: { start: '2026-07-04', end: null, note: '杭州惯例，结束日待确认' },
         spring: { start: '2026-04-03', end: '2026-04-05', note: '春秋假制度（区县可微调）' },
-        autumn: AB(
-          '2026-09-28',
-          '2026-09-30',
-          '主城区2026年秋假，与中秋国庆衔接可连休；三县一市多为11月12、13、16日',
-        ),
+        autumn: {
+          ...AB(
+            '2026-09-28',
+            '2026-09-30',
+            '主城区2026年秋假，与中秋国庆衔接可连休；三县一市多为11月12、13、16日',
+          ),
+          uncertain: true,
+          ranges: [{ start: '2026-11-12', end: '2026-11-16' }],
+        },
         source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
         updatedAt: '2026-11-09',
         illustrative: false,
@@ -356,8 +369,12 @@ const provinces = [
         winter: ['2026-02-07', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假各约 3 天，市级弹性安排'),
-        autumn: NULL_SEASON(
+        autumn: UNCERTAIN_SEASON(
           '2026年各县市区分两批：11月11—13日或11月16—18日，具体以县市区通知为准',
+          [
+            { start: '2026-11-11', end: '2026-11-13' },
+            { start: '2026-11-16', end: '2026-11-18' },
+          ],
         ),
         source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
         updatedAt: '2026-11-09',
@@ -389,7 +406,14 @@ const provinces = [
         winter: ['2026-02-08', '2026-03-03'],
         summer: summerJul4,
         spring: NULL_SEASON('春秋假制度'),
-        autumn: NULL_SEASON('2026年分三批：11月11—13日、16—18日或13/16/17日，区县不同'),
+        autumn: UNCERTAIN_SEASON(
+          '2026年分三批：11月11—13日、16—18日或13/16/17日，区县不同',
+          [
+            { start: '2026-11-11', end: '2026-11-13' },
+            { start: '2026-11-16', end: '2026-11-18' },
+            { start: '2026-11-13', end: '2026-11-17' },
+          ],
+        ),
         source: 'http://news.cnnb.com.cn/system/2026/09/03/030810930.shtml',
         updatedAt: '2026-11-09',
         illustrative: false,
@@ -492,7 +516,14 @@ const provinces = [
         winter: ['2026-01-31', '2026-02-25'],
         summer: { start: '2026-07-04', end: '2026-08-31', note: '义务教育' },
         spring: NULL_SEASON('以闽教办基〔2025〕11 号及市通知为准'),
-        autumn: NULL_SEASON('2026年区县错峰：多数区11月18—20日，长乐/马尾11月23—25日，福清11月16—18日'),
+        autumn: UNCERTAIN_SEASON(
+          '2026年区县错峰：多数区11月18—20日，长乐/马尾11月23—25日，福清11月16—18日',
+          [
+            { start: '2026-11-18', end: '2026-11-20' },
+            { start: '2026-11-23', end: '2026-11-25' },
+            { start: '2026-11-16', end: '2026-11-18' },
+          ],
+        ),
         source: 'https://www.chinanews.com.cn/edu/2026/10-10/10709987.shtml',
         updatedAt: '2026-11-09',
         illustrative: false,
@@ -827,9 +858,20 @@ const provinces = [
         const scAutumn = {
           绵阳市: AB('2026-11-18', '2026-11-20', '2026年秋假第三周后3天，与周末连休共5天'),
           南充市: AB('2026-11-04', '2026-11-06', '2026年秋假3天，高三毕业年级除外'),
-          宜宾市: AB('2026-11-18', '2026-11-20', '中心城区第一批11月18—20日；部分县市11月23—25日'),
+          宜宾市: {
+            ...AB(
+              '2026-11-18',
+              '2026-11-20',
+              '中心城区第一批11月18—20日；部分县市11月23—25日',
+            ),
+            uncertain: true,
+            ranges: [{ start: '2026-11-23', end: '2026-11-25' }],
+          },
           泸州市: AB('2026-11-11', '2026-11-13', '2026年幼儿园、一至八年级秋假，与周末连休共5天'),
-          德阳市: NULL_SEASON('2026年分两批：11月18—20日或11月25—27日，按属地确定'),
+          德阳市: UNCERTAIN_SEASON('2026年分两批：11月18—20日或11月25—27日，按属地确定', [
+            { start: '2026-11-18', end: '2026-11-20' },
+            { start: '2026-11-25', end: '2026-11-27' },
+          ]),
         }
         return fromTemplate(n, {
           winter: ['2026-01-31', '2026-03-02'],
