@@ -559,6 +559,11 @@
   color: #b45309;
 }
 
+.badge--multi {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
 .break-grid {
   margin: 0;
   display: grid;

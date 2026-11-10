@@ -35,12 +35,21 @@ function shiftIso(iso, yearDelta) {
   return `${y + yearDelta}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`
 }
 
+function shiftRanges(ranges, yearDelta) {
+  if (!ranges?.length) return ranges
+  return ranges.map((r) => ({
+    start: r.start ? shiftIso(r.start, yearDelta) : r.start,
+    end: r.end ? shiftIso(r.end, yearDelta) : r.end,
+  }))
+}
+
 function shiftBreakDates(br) {
   if (!br) return br
   return {
     ...br,
     start: br.start ? shiftIso(br.start, -1) : br.start,
     end: br.end ? shiftIso(br.end, -1) : br.end,
+    ranges: shiftRanges(br.ranges, -1),
   }
 }
 
@@ -107,6 +116,8 @@ const CITY_OVERRIDES = {
       end: '2025-09-30',
       note:
         '2025学年主城区秋假3天（9/28—30，可与国庆连休）；桐庐、淳安、建德错峰为11月10—12日',
+      uncertain: true,
+      ranges: [{ start: '2025-11-10', end: '2025-11-12' }],
     },
     spring: {
       start: '2025-04-04',
@@ -178,6 +189,8 @@ const CITY_OVERRIDES = {
       start: '2025-11-21',
       end: '2025-11-25',
       note: '市区3天含周末连休5日；兰溪等县区错峰为11月12—16日',
+      uncertain: true,
+      ranges: [{ start: '2025-11-12', end: '2025-11-16' }],
     },
     source: ZJ_AUTUMN_XINHUA,
     updatedAt: '2025-10-11',

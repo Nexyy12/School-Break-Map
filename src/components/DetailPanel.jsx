@@ -2,11 +2,18 @@ import { breakLabel, formatDateRange } from '../utils/format'
 
 const BREAK_ORDER = ['spring', 'summer', 'autumn', 'winter']
 
+function cityHasUncertainBreaks(city) {
+  return BREAK_ORDER.some((key) => city.breaks?.[key]?.uncertain)
+}
+
 function CityCard({ city }) {
   return (
     <article className="city-card">
       <header className="city-card__header">
         <h3 className="city-card__title">{city.name}</h3>
+        {cityHasUncertainBreaks(city) && (
+          <span className="badge badge--multi">多批次</span>
+        )}
         {city.illustrative && <span className="badge badge--warn">待核对</span>}
       </header>
       <dl className="break-grid">

@@ -33,7 +33,7 @@ node scripts/generate-school-breaks-2025.mjs
 ```
 
 - 省级记录含 `name`、`mapName`（与地图省份全称对应）、`cities` 数组
-- 每个城市含四季 `breaks`（`spring` / `summer` / `autumn` / `winter`），字段 `start`、`end`（ISO 日期或 `null`）、`note`
+- 每个城市含四季 `breaks`（`spring` / `summer` / `autumn` / `winter`），字段 `start`、`end`（ISO 日期或 `null`）、`note`；多批次/区县错峰时可加 `ranges`（`{start,end}` 数组）、`uncertain: true`（热力图合并各段并做周末延伸，卡片日期仍可只看 `start`/`end`）
 - 务必填写 `source`、`updatedAt`；非一级来源可设 `illustrative: true`
 
 方案与采集策略见项目文档 [school-breaks-plan.md](https://github.com/Nexyy12/School-Break-Map/blob/main/docs/school-breaks-plan.md)（若已同步至仓库）。

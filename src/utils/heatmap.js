@@ -51,14 +51,52 @@ export function expandBreakWithWeekends(start, end) {
   return { start: effStart, end: effEnd }
 }
 
-function effectiveBreakRange(br) {
-  if (!br?.start || !br?.end) return null
-  return expandBreakWithWeekends(br.start, br.end)
+function effectiveRangeDays(start, end) {
+  const eff = expandBreakWithWeekends(start, end)
+  if (!eff?.start || !eff?.end) return []
+  return enumerateDates(eff.start, eff.end)
+}
+
+/**
+ * Union of heatmap-effective days for a city/season: primary start–end plus
+ * every entry in optional `ranges[]` (deduped per day).
+ *
+ * @param {{ breaks?: Record<string, { start?: string|null, end?: string|null, ranges?: Array<{ start: string, end: string }> }> }} city
+ * @param {'spring'|'summer'|'autumn'|'winter'} breakKey
+ * @returns {string[]}
+ */
+export function getCityBreakDays(city, breakKey) {
+  const br = city.breaks?.[breakKey]
+  if (!br) return []
+
+  const daySet = new Set()
+
+  const addSpan = (start, end) => {
+    for (const d of effectiveRangeDays(start, end)) {
+      daySet.add(d)
+    }
+  }
+
+  if (br.ranges?.length) {
+    for (const r of br.ranges) {
+      addSpan(r.start, r.end)
+    }
+  }
+
+  if (br.start && br.end) {
+    addSpan(br.start, br.end)
+  }
+
+  return [...daySet].sort()
+}
+
+function cityOnBreakForDay(city, breakKey, day) {
+  return getCityBreakDays(city, breakKey).includes(day)
 }
 
 /**
  * @param {'spring'|'summer'|'autumn'|'winter'} breakKey
- * @param {Array<{ code: string, name: string, cities: Array<{ breaks: Record<string, { start: string|null, end: string|null }> }> }>} provinces
+ * @param {Array<{ code: string, name: string, cities: Array<{ breaks: Record<string, { start: string|null, end: string|null, ranges?: Array<{ start: string, end: string }> }> }> }>} provinces
  */
 export function buildHeatmapData(breakKey, provinces) {
   let rangeStart = null
@@ -66,12 +104,12 @@ export function buildHeatmapData(breakKey, provinces) {
 
   for (const province of provinces) {
     for (const city of province.cities) {
-      const br = city.breaks?.[breakKey]
-      const eff = effectiveBreakRange(br)
-      if (eff) {
-        if (!rangeStart || eff.start < rangeStart) rangeStart = eff.start
-        if (!rangeEnd || eff.end > rangeEnd) rangeEnd = eff.end
-      }
+      const days = getCityBreakDays(city, breakKey)
+      if (!days.length) continue
+      const first = days[0]
+      const last = days[days.length - 1]
+      if (!rangeStart || first < rangeStart) rangeStart = first
+      if (!rangeEnd || last > rangeEnd) rangeEnd = last
     }
   }
 
@@ -82,9 +120,7 @@ export function buildHeatmapData(breakKey, provinces) {
     const counts = dates.map((day) => {
       let n = 0
       for (const city of province.cities) {
-        const br = city.breaks?.[breakKey]
-        const eff = effectiveBreakRange(br)
-        if (eff && isDayInRange(day, eff.start, eff.end)) {
+        if (cityOnBreakForDay(city, breakKey, day)) {
           n += 1
         }
       }
@@ -130,9 +166,7 @@ export function provincesOnBreakForDay(breakKey, provinces, day) {
   for (const province of provinces) {
     let any = false
     for (const city of province.cities) {
-      const br = city.breaks?.[breakKey]
-      const eff = effectiveBreakRange(br)
-      if (eff && isDayInRange(day, eff.start, eff.end)) {
+      if (cityOnBreakForDay(city, breakKey, day)) {
         any = true
         break
       }
