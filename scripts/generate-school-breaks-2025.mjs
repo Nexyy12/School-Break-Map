@@ -1,6 +1,8 @@
 /**
- * Derives public/data/school-breaks-2025.json from school-breaks-2026.json.
- * Shifts calendar seasons for 2024—2025 学年; applies researched overrides where available.
+ * Generates public/data/school-breaks-2025.json — 2024—2025 学年.
+ * Uses school-breaks-2026.json only for province/city coverage; winter/summer dates
+ * may be −1y shifted from 2026 where no override exists. Spring/autumn are NEVER
+ * copied or shifted from 2026; only explicit CITY_OVERRIDES / PROVINCE_OVERRIDES.
  */
 
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -14,6 +16,15 @@ const outPath = join(root, 'public/data/school-breaks-2025.json')
 const CALENDAR_YEAR = 2025
 const NO_SPRING_AUTUMN_JS =
   '江苏省在2024—2025学年无全省统一春秋假制度；2026年秋季学期起全省推行义务教育秋假（见2026年数据集）'
+const NO_SPRING_2025 =
+  '2024—2025学年未查到本市义务教育统一春假日期公布（以教育局校历为准）'
+const NO_AUTUMN_2025 =
+  '2024—2025学年未查到本市义务教育统一秋假日期公布（以教育局校历为准）'
+const NO_SD_SPRING_AUTUMN =
+  '山东省2024—2025学年未全省推行义务教育春秋假；部分地市自2026年春季学期起安排春秋假（见2026年数据集）'
+
+const NULL_SPRING = { start: null, end: null, note: NO_SPRING_2025 }
+const NULL_AUTUMN = { start: null, end: null, note: NO_AUTUMN_2025 }
 
 function shiftIso(iso, yearDelta) {
   if (!iso || typeof iso !== 'string') return iso
@@ -21,7 +32,6 @@ function shiftIso(iso, yearDelta) {
   return `${y + yearDelta}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`
 }
 
-/** All seasons use −1y so the 2025 dataset heatmap stays in the 2025 calendar bucket. */
 function shiftBreakDates(br) {
   if (!br) return br
   return {
@@ -33,7 +43,6 @@ function shiftBreakDates(br) {
 
 /**
  * Province-level patches (province code → breaks + metadata).
- * Applied before per-city overrides; cities may still override winter/summer.
  */
 const PROVINCE_OVERRIDES = {
   JS: {
@@ -53,6 +62,11 @@ const PROVINCE_OVERRIDES = {
       'https://jyt.jiangsu.gov.cn/art/2024/12/30/art_58320_11459254.html',
     updatedAt: '2024-12-30',
     illustrative: false,
+  },
+  SD: {
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    illustrative: true,
   },
 }
 
@@ -89,7 +103,7 @@ const CITY_OVERRIDES = {
       start: '2024-09-28',
       end: '2024-09-30',
       note:
-        '主城区2024年秋假（属2024—2025学年第一学期）；在「2025」年视图仍显示该历史公布日期',
+        '主城区2024年秋假（2024—2025学年第一学期）；在「2025」年视图仍显示该历史公布日期',
     },
     spring: {
       start: '2025-04-04',
@@ -105,6 +119,8 @@ const CITY_OVERRIDES = {
   宁波市: {
     winter: { start: '2025-01-22', end: '2025-02-12', note: '义务教育' },
     summer: { start: '2025-07-05', end: '2025-08-31', note: '义务教育' },
+    spring: { start: null, end: null, note: NO_SPRING_2025 },
+    autumn: { start: null, end: null, note: NO_AUTUMN_2025 },
     source: 'http://news.cnnb.com.cn/system/2024/06/17/030593478.shtml',
     updatedAt: '2024-06-17',
     illustrative: false,
@@ -135,7 +151,7 @@ const CITY_OVERRIDES = {
       start: '2024-11-22',
       end: '2024-11-24',
       note:
-        '2024年全市义务教育阶段秋假试点（属2024—2025学年）；2025年视图保留已公布日期',
+        '2024年全市义务教育阶段秋假试点（2024—2025学年）；2025年视图保留已公布日期',
     },
     illustrative: true,
   },
@@ -145,6 +161,93 @@ const CITY_OVERRIDES = {
     source: 'http://m.cnhubei.com/content/2025-09/02/content_19468079.html',
     updatedAt: '2024-09-02',
     illustrative: true,
+  },
+  济南市: {
+    winter: {
+      start: '2025-01-18',
+      end: '2025-02-12',
+      note: '义务教育（2024—2025学年度周历）',
+    },
+    summer: {
+      start: '2025-07-05',
+      end: '2025-08-31',
+      note: '义务教育',
+    },
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    source:
+      'http://jnedu.jinan.gov.cn/attach/0/d9fd2d6491564415b1697c87ae8c49e6.pdf',
+    updatedAt: '2024-10-01',
+    illustrative: false,
+  },
+  青岛市: {
+    winter: {
+      start: '2025-01-15',
+      end: '2025-02-12',
+      note: '义务教育（2024—2025学年第二学期校历，2月13日报到）',
+    },
+    summer: {
+      start: '2025-07-07',
+      end: '2025-08-31',
+      note: '义务教育',
+    },
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    source:
+      'http://www.qingdao.gov.cn/zwgk/xxgk/jyj/ywfl/tzgg/202412/t20241211_8683853.shtml',
+    updatedAt: '2024-12-11',
+    illustrative: false,
+  },
+  烟台市: {
+    winter: {
+      start: '2025-01-11',
+      end: '2025-02-12',
+      note: '义务教育（2024—2025学年寒假通知，2月13日开学）',
+    },
+    summer: {
+      start: '2025-07-14',
+      end: '2025-08-31',
+      note: '义务教育',
+    },
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    source: 'https://news.qq.com/rain/a/20241215A01X0100',
+    updatedAt: '2024-12-15',
+    illustrative: false,
+  },
+  潍坊市: {
+    winter: {
+      start: '2025-01-16',
+      end: '2025-02-12',
+      note: '义务教育（市区2024—2025学年第一学期至1月15日结束）',
+    },
+    summer: {
+      start: '2025-07-07',
+      end: '2025-08-31',
+      note: '义务教育',
+    },
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    source: 'https://weifang.dzwww.com/wfxwn/202505/t20250527_15986622.htm',
+    updatedAt: '2025-05-27',
+    illustrative: false,
+  },
+  临沂市: {
+    winter: {
+      start: '2025-01-16',
+      end: '2025-02-13',
+      note: '义务教育（2024—2025学年，2月14日开学）',
+    },
+    summer: {
+      start: '2025-07-07',
+      end: '2025-08-31',
+      note: '义务教育',
+    },
+    spring: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    autumn: { start: null, end: null, note: NO_SD_SPRING_AUTUMN },
+    source: 'https://meili.lywww.com/info_48407.html',
+    updatedAt: '2025-06-10',
+    illustrative: false,
   },
 }
 
@@ -173,20 +276,39 @@ function applyCityOverride(city) {
   return mergeBreakPatch(city, patch)
 }
 
-/** Drop illustrative autumn dates that fall before CALENDAR_YEAR (auto-shift artefacts). */
-function sanitizeAutumnForCalendarYear(city) {
-  const a = city.breaks?.autumn
-  if (!a?.start) return city
-  const y = Number(a.start.slice(0, 4))
-  if (y >= CALENDAR_YEAR) return city
-  if (city.illustrative === false) return city
-  return mergeBreakPatch(city, {
-    autumn: {
-      start: null,
-      end: null,
-      note: '2025年视图不展示由2026数据偏移得到的上一自然年秋季日期；以2024—2025学年本市通知为准',
-    },
-  })
+/** Remove 2026-source wording; never keep shifted autumn with 2026 notes. */
+function scrub2026Contamination(city) {
+  let next = { ...city, breaks: { ...city.breaks } }
+  const hasOverride = Boolean(CITY_OVERRIDES[city.name])
+
+  for (const season of ['spring', 'autumn', 'summer', 'winter']) {
+    const b = next.breaks[season]
+    if (!b) continue
+    const note = b.note ?? ''
+  if (!note.includes('2026') && !note.includes('2026年')) continue
+
+    if (season === 'spring' || season === 'autumn') {
+      if (hasOverride && city.illustrative === false && b.start) {
+        next.breaks[season] = { ...b, note: note.replace(/2026年/g, '') }
+        continue
+      }
+      next.breaks[season] = {
+        start: null,
+        end: null,
+        note: season === 'autumn' ? NO_AUTUMN_2025 : NO_SPRING_2025,
+      }
+      continue
+    }
+    next.breaks[season] = {
+      ...b,
+      note: note.replace(/2026年[^；。，、]*[；。，、]?/g, '').trim() || b.note.replace(/2026/g, '') || '义务教育',
+    }
+  }
+
+  if (next.updatedAt?.startsWith('2026') && !hasOverride) {
+    next.illustrative = true
+  }
+  return next
 }
 
 const src = JSON.parse(readFileSync(inPath, 'utf8'))
@@ -194,18 +316,18 @@ const src = JSON.parse(readFileSync(inPath, 'utf8'))
 const provinces = src.provinces.map((province) => ({
   ...province,
   cities: province.cities.map((city) => {
-    const shifted = {
+    const base = {
       ...city,
       breaks: {
-        spring: shiftBreakDates(city.breaks.spring),
+        spring: { ...NULL_SPRING },
+        autumn: { ...NULL_AUTUMN },
         summer: shiftBreakDates(city.breaks.summer),
-        autumn: shiftBreakDates(city.breaks.autumn),
         winter: shiftBreakDates(city.breaks.winter),
       },
     }
-    let next = applyProvinceOverride(province, shifted)
+    let next = applyProvinceOverride(province, base)
     next = applyCityOverride(next)
-    next = sanitizeAutumnForCalendarYear(next)
+    next = scrub2026Contamination(next)
     return next
   }),
 }))
@@ -216,7 +338,7 @@ const dataset = {
     calendarYear: CALENDAR_YEAR,
     datasetUpdatedAt: '2025-11-10',
     disclaimer:
-      '默认展示义务教育（小学、初中）区间。无市级原文的城市可能由2026数据集按学年−1年偏移推导并标注illustrative；秋假与「2025」年选择器对齐自然年2025，已核对城市除外（如杭州2024年秋假试点）。江苏省2024—2025学年无全省春秋假。',
+      '默认展示义务教育（小学、初中）区间。春假、秋假仅收录有出处的 2024—2025 学年公布日期，不从 2026 数据集偏移填充。寒暑假无市级原文时可能由 2026 数据−1 年推导并标注 illustrative。江苏省 2024—2025 学年无全省春秋假；山东省春秋假自 2026 年春季学期起在部分地市推行。',
     derivedFrom: 'school-breaks-2026.json',
   },
   provinces,
@@ -227,18 +349,22 @@ writeFileSync(outPath, `${JSON.stringify(dataset, null, 2)}\n`, 'utf8')
 const cityCount = provinces.reduce((n, p) => n + p.cities.length, 0)
 const js = provinces.find((p) => p.code === 'JS')
 const jsAutumn = js?.cities.filter((c) => c.breaks.autumn?.start).length ?? 0
-const autumn2024 = provinces.reduce(
-  (n, p) =>
-    n +
-    p.cities.filter((c) => {
-      const s = c.breaks.autumn?.start
-      return s && s.startsWith('2024')
-    }).length,
+const autumnNonNull = provinces.reduce(
+  (n, p) => n + p.cities.filter((c) => c.breaks.autumn?.start).length,
   0,
 )
+const ref2026 = JSON.stringify(dataset).match(/2026/g)?.length ?? 0
+const sd = provinces.find((p) => p.code === 'SD')
 console.log(
   `Wrote ${provinces.length} provinces, ${cityCount} cities → ${outPath}`,
 )
 console.log(
-  `江苏秋假有日期城市数: ${jsAutumn}（应为0）；全国秋假仍含2024年日期的已核对城市: ${autumn2024}`,
+  `江苏秋假有日期城市数: ${jsAutumn}（应为0）；全国秋假有日期: ${autumnNonNull}；JSON内「2026」出现次数: ${ref2026}`,
 )
+if (sd) {
+  for (const c of sd.cities) {
+    console.log(
+      `  山东 ${c.name}: 秋假 ${c.breaks.autumn?.start ?? 'null'}; 冬 ${c.breaks.winter?.start}—${c.breaks.winter?.end}`,
+    )
+  }
+}
