@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import ChinaMap from './components/ChinaMap'
 import DetailPanel from './components/DetailPanel'
 import ProvinceList from './components/ProvinceList'
+import BreakHeatmap from './components/BreakHeatmap'
 import './App.css'
 
 export default function App() {
@@ -76,6 +77,7 @@ export default function App() {
           onSelect={handleSelect}
         />
         <div className="content-column">
+          <BreakHeatmap provinces={data.provinces} />
           <section className="map-section" aria-label="中国地图">
             <ChinaMap
               provinces={data.provinces}
