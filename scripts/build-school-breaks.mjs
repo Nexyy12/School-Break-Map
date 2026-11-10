@@ -1,6 +1,6 @@
 /**
- * Generates public/data/school-breaks.json — 2025–2026 school year nationwide coverage.
- * Run: node scripts/build-school-breaks.mjs
+ * Generates public/data/school-breaks-2026.json — 2025–2026 school year nationwide coverage.
+ * Run: node scripts/build-school-breaks.mjs && node scripts/generate-school-breaks-2025.mjs
  */
 
 import { writeFileSync } from 'node:fs'
@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const outPath = join(root, 'public/data/school-breaks.json')
+const outPath = join(root, 'public/data/school-breaks-2026.json')
 
 const NULL_SEASON = (note) => ({ start: null, end: null, note })
 

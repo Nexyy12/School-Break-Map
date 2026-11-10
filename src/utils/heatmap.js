@@ -26,6 +26,37 @@ function isDayInRange(day, start, end) {
 }
 
 /**
+ * Heatmap counts only: if an official break sits immediately before or after
+ * a Sat–Sun weekend, extend the effective range to include that full weekend
+ * (e.g. Fri end → through Sun; Mon start → from preceding Sat).
+ */
+export function expandBreakWithWeekends(start, end) {
+  if (!start || !end) return { start, end }
+
+  let effStart = start
+  let effEnd = end
+
+  const startDow = parseIso(start).getDay()
+  if (startDow === 1) {
+    effStart = addDays(start, -2)
+  }
+
+  const endDow = parseIso(end).getDay()
+  if (endDow === 5) {
+    effEnd = addDays(end, 2)
+  } else if (endDow === 6) {
+    effEnd = addDays(end, 1)
+  }
+
+  return { start: effStart, end: effEnd }
+}
+
+function effectiveBreakRange(br) {
+  if (!br?.start || !br?.end) return null
+  return expandBreakWithWeekends(br.start, br.end)
+}
+
+/**
  * @param {'spring'|'summer'|'autumn'|'winter'} breakKey
  * @param {Array<{ code: string, name: string, cities: Array<{ breaks: Record<string, { start: string|null, end: string|null }> }> }>} provinces
  */
@@ -36,9 +67,10 @@ export function buildHeatmapData(breakKey, provinces) {
   for (const province of provinces) {
     for (const city of province.cities) {
       const br = city.breaks?.[breakKey]
-      if (br?.start && br?.end) {
-        if (!rangeStart || br.start < rangeStart) rangeStart = br.start
-        if (!rangeEnd || br.end > rangeEnd) rangeEnd = br.end
+      const eff = effectiveBreakRange(br)
+      if (eff) {
+        if (!rangeStart || eff.start < rangeStart) rangeStart = eff.start
+        if (!rangeEnd || eff.end > rangeEnd) rangeEnd = eff.end
       }
     }
   }
@@ -51,7 +83,8 @@ export function buildHeatmapData(breakKey, provinces) {
       let n = 0
       for (const city of province.cities) {
         const br = city.breaks?.[breakKey]
-        if (br?.start && br?.end && isDayInRange(day, br.start, br.end)) {
+        const eff = effectiveBreakRange(br)
+        if (eff && isDayInRange(day, eff.start, eff.end)) {
           n += 1
         }
       }
@@ -83,6 +116,27 @@ export function buildHeatmapData(breakKey, provinces) {
     rangeStart,
     rangeEnd,
   }
+}
+
+/**
+ * Province codes with at least one city on break for `day` (heatmap effective ranges).
+ */
+export function provincesOnBreakForDay(breakKey, provinces, day) {
+  if (!day) return []
+  const codes = []
+  for (const province of provinces) {
+    let any = false
+    for (const city of province.cities) {
+      const br = city.breaks?.[breakKey]
+      const eff = effectiveBreakRange(br)
+      if (eff && isDayInRange(day, eff.start, eff.end)) {
+        any = true
+        break
+      }
+    }
+    if (any) codes.push(province.code)
+  }
+  return codes
 }
 
 export function heatCellBackground(count, maxCount) {
