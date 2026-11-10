@@ -3,45 +3,75 @@ import ChinaMap from './components/ChinaMap'
 import DetailPanel from './components/DetailPanel'
 import ProvinceList from './components/ProvinceList'
 import BreakHeatmap from './components/BreakHeatmap'
+import { provincesOnBreakForDay } from './utils/heatmap'
 import './App.css'
 
+const YEAR_OPTIONS = [2025, 2026]
+
 export default function App() {
+  const [year, setYear] = useState(2026)
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [selectedCode, setSelectedCode] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [heatmapBreakKey, setHeatmapBreakKey] = useState('autumn')
+  const [selectedHeatmapDate, setSelectedHeatmapDate] = useState(null)
 
   useEffect(() => {
     let cancelled = false
-    fetch('/data/school-breaks.json')
+    setLoading(true)
+    setError(null)
+    fetch(`/data/school-breaks-${year}.json`)
       .then((res) => {
-        if (!res.ok) throw new Error(`无法加载数据（${res.status}）`)
+        if (!res.ok) throw new Error(`无法加载 ${year} 年数据（${res.status}）`)
         return res.json()
       })
       .then((json) => {
         if (cancelled) return
         setData(json)
         setSelectedCode(json.provinces[0]?.code ?? null)
+        setSelectedHeatmapDate(null)
         setLoading(false)
       })
       .catch((err) => {
         if (!cancelled) {
           setError(err.message)
+          setData(null)
           setLoading(false)
         }
       })
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [year])
 
   const selectedProvince = useMemo(() => {
     if (!data) return null
     return data.provinces.find((p) => p.code === selectedCode) ?? null
   }, [data, selectedCode])
 
+  const highlightedCodes = useMemo(() => {
+    if (!data || !selectedHeatmapDate) return []
+    return provincesOnBreakForDay(
+      heatmapBreakKey,
+      data.provinces,
+      selectedHeatmapDate,
+    )
+  }, [data, heatmapBreakKey, selectedHeatmapDate])
+
   const handleSelect = useCallback((code) => {
     setSelectedCode(code)
+    setSelectedHeatmapDate(null)
+  }, [])
+
+  const handleBreakKeyChange = useCallback((key) => {
+    setHeatmapBreakKey(key)
+    setSelectedHeatmapDate(null)
+  }, [])
+
+  const handleYearChange = useCallback((nextYear) => {
+    setYear(nextYear)
+    setSelectedHeatmapDate(null)
   }, [])
 
   if (loading) {
@@ -64,15 +94,27 @@ export default function App() {
     <div className="app">
       <header className="app-header">
         <div className="app-header__inner">
-          <h1 className="app-title">中国学期假期地图</h1>
-          <p className="app-subtitle">
-            {data.meta.schoolYear} 学年 · 数据更新于 {data.meta.datasetUpdatedAt}
-          </p>
+          <div className="app-header__row">
+            <div>
+              <h1 className="app-title">中国学期假期地图</h1>
+              <p className="app-subtitle">
+                {data.meta.schoolYear} 学年 · 数据更新于{' '}
+                {data.meta.datasetUpdatedAt}
+              </p>
+            </div>
+            <YearPicker year={year} onChange={handleYearChange} />
+          </div>
         </div>
       </header>
       <main className="app-main">
         <div className="app-main__heatmap">
-          <BreakHeatmap provinces={data.provinces} />
+          <BreakHeatmap
+            provinces={data.provinces}
+            breakKey={heatmapBreakKey}
+            onBreakKeyChange={handleBreakKeyChange}
+            selectedDate={selectedHeatmapDate}
+            onSelectDate={setSelectedHeatmapDate}
+          />
         </div>
         <div className="app-main__body">
           <ProvinceList
@@ -85,6 +127,7 @@ export default function App() {
               <ChinaMap
                 provinces={data.provinces}
                 selectedCode={selectedCode}
+                highlightedCodes={highlightedCodes}
                 onSelect={handleSelect}
               />
             </section>
@@ -97,6 +140,25 @@ export default function App() {
           本演示数据标注来源链接；春秋假试点政策仍在扩散，开学季请核对教育厅最新通知。
         </p>
       </footer>
+    </div>
+  )
+}
+
+function YearPicker({ year, onChange }) {
+  return (
+    <div className="year-picker" role="radiogroup" aria-label="选择学年数据年份">
+      {YEAR_OPTIONS.map((y) => (
+        <label key={y} className="year-picker__option">
+          <input
+            type="radio"
+            name="data-year"
+            value={y}
+            checked={year === y}
+            onChange={() => onChange(y)}
+          />
+          <span>{y}</span>
+        </label>
+      ))}
     </div>
   )
 }
