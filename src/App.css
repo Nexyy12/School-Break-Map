@@ -45,6 +45,54 @@
   gap: 1rem;
 }
 
+.app-header__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.language-picker {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.language-picker__option {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.language-picker__option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.language-picker__option span {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.language-picker__option input:checked + span {
+  background: #fff;
+  color: #1e40af;
+  border-color: #fff;
+}
+
+.language-picker__option input:focus-visible + span {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .year-picker {
   display: flex;
   gap: 0.35rem;
@@ -548,39 +596,10 @@
   line-height: 1.5;
 }
 
-.date-break-list__grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-  gap: 0.55rem;
-  max-height: min(58vh, 520px);
+.city-list--scrollable {
+  max-height: min(58vh, 720px);
   overflow-y: auto;
   padding-right: 0.25rem;
-}
-
-.date-break-list__item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  padding: 0.55rem 0.65rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  background: #f8fafc;
-}
-
-.date-break-list__city {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #1e293b;
-  line-height: 1.35;
-}
-
-.date-break-list__province {
-  font-size: inherit;
-  font-weight: 500;
-  color: #64748b;
 }
 
 .city-list {
@@ -623,6 +642,16 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.city-card__province {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
 }
 
 .badge {

@@ -3,11 +3,13 @@ import DetailPanel from './components/DetailPanel'
 import ProvinceList from './components/ProvinceList'
 import BreakHeatmap from './components/BreakHeatmap'
 import DateBreakCityList from './components/DateBreakCityList'
+import { useI18n } from './i18n/I18nContext'
 import './App.css'
 
 const YEAR_OPTIONS = [2025, 2026]
 
 export default function App() {
+  const { t } = useI18n()
   const [year, setYear] = useState(2026)
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
@@ -22,7 +24,12 @@ export default function App() {
     setError(null)
     fetch(`/data/school-breaks-${year}.json`)
       .then((res) => {
-        if (!res.ok) throw new Error(`无法加载 ${year} 年数据（${res.status}）`)
+        if (!res.ok) {
+          const err = new Error('load-failed')
+          err.year = year
+          err.status = res.status
+          throw err
+        }
         return res.json()
       })
       .then((json) => {
@@ -34,7 +41,7 @@ export default function App() {
       })
       .catch((err) => {
         if (!cancelled) {
-          setError(err.message)
+          setError(err)
           setData(null)
           setLoading(false)
         }
@@ -63,10 +70,18 @@ export default function App() {
     setSelectedHeatmapDate(null)
   }, [])
 
+  const errorMessage = useMemo(() => {
+    if (!error) return null
+    if (error.message === 'load-failed') {
+      return t('app.loadDataError', { year: error.year, status: error.status })
+    }
+    return error.message || t('app.unknownError')
+  }, [error, t])
+
   if (loading) {
     return (
       <div className="app app--loading">
-        <p>正在加载校历数据…</p>
+        <p>{t('app.loading')}</p>
       </div>
     )
   }
@@ -74,7 +89,10 @@ export default function App() {
   if (error || !data) {
     return (
       <div className="app app--error">
-        <p>加载失败：{error ?? '未知错误'}</p>
+        <p>
+          {t('app.loadFailed')}
+          {errorMessage ?? t('app.unknownError')}
+        </p>
       </div>
     )
   }
@@ -85,13 +103,18 @@ export default function App() {
         <div className="app-header__inner">
           <div className="app-header__row">
             <div>
-              <h1 className="app-title">中国学期假期地图</h1>
+              <h1 className="app-title">{t('app.title')}</h1>
               <p className="app-subtitle">
-                {data.meta.schoolYear} 学年 · 数据更新于{' '}
-                {data.meta.datasetUpdatedAt}
+                {t('app.subtitle', {
+                  schoolYear: data.meta.schoolYear,
+                  updatedAt: data.meta.datasetUpdatedAt,
+                })}
               </p>
             </div>
-            <YearPicker year={year} onChange={handleYearChange} />
+            <div className="app-header__controls">
+              <LanguagePicker />
+              <YearPicker year={year} onChange={handleYearChange} />
+            </div>
           </div>
         </div>
       </header>
@@ -125,17 +148,41 @@ export default function App() {
         </div>
       </main>
       <footer className="app-footer">
-        <p>
-          本演示数据标注来源链接；春秋假试点政策仍在扩散，开学季请核对教育厅最新通知。
-        </p>
+        <p>{t('footer.disclaimer')}</p>
       </footer>
     </div>
   )
 }
 
-function YearPicker({ year, onChange }) {
+function LanguagePicker() {
+  const { locale, setLocale, t } = useI18n()
+
   return (
-    <div className="year-picker" role="radiogroup" aria-label="选择学年数据年份">
+    <div className="language-picker" role="radiogroup" aria-label={t('languagePicker.ariaLabel')}>
+      {[
+        { value: 'zh', label: t('languagePicker.zh') },
+        { value: 'en', label: t('languagePicker.en') },
+      ].map(({ value, label }) => (
+        <label key={value} className="language-picker__option">
+          <input
+            type="radio"
+            name="ui-locale"
+            value={value}
+            checked={locale === value}
+            onChange={() => setLocale(value)}
+          />
+          <span>{label}</span>
+        </label>
+      ))}
+    </div>
+  )
+}
+
+function YearPicker({ year, onChange }) {
+  const { t } = useI18n()
+
+  return (
+    <div className="year-picker" role="radiogroup" aria-label={t('yearPicker.ariaLabel')}>
       {YEAR_OPTIONS.map((y) => (
         <label key={y} className="year-picker__option">
           <input

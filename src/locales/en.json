@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "China School Break Map",
+    "subtitle": "School year {{schoolYear}} · Data updated {{updatedAt}}",
+    "loading": "Loading school calendar data…",
+    "loadFailed": "Failed to load: ",
+    "unknownError": "Unknown error",
+    "loadDataError": "Could not load {{year}} data (HTTP {{status}})"
+  },
+  "footer": {
+    "disclaimer": "Demo data includes source links. Pilot spring/autumn break policies are still expanding—verify with your local education bureau before the term starts."
+  },
+  "detail": {
+    "disclaimer": "Ranges show compulsory education (primary and junior high) by default; senior grades may differ—follow official local calendars. Some cities without municipal sources use media summaries or provincial templates and may be marked illustrative."
+  },
+  "yearPicker": {
+    "ariaLabel": "Select school year dataset"
+  },
+  "languagePicker": {
+    "ariaLabel": "Select interface language",
+    "zh": "中文",
+    "en": "English"
+  },
+  "season": {
+    "spring": "Spring break",
+    "summer": "Summer break",
+    "autumn": "Autumn break",
+    "winter": "Winter break"
+  },
+  "heatmap": {
+    "ariaLabel": "School break heatmap",
+    "title": "Break heatmap",
+    "empty": "No date range available for {{season}}.",
+    "rangeHintBase": "{{season}} · {{start}} to {{end}} · Each cell shows cities on break in that province (bridge weekends included)",
+    "selectedHint": "· Selected {{date}} — cities on break listed below",
+    "clickHint": "· Click a date column to list cities on break that day",
+    "provinceColumn": "Province",
+    "nationalTotal": "National total",
+    "periodAriaLabel": "Select break type"
+  },
+  "provinceList": {
+    "ariaLabel": "Province list",
+    "title": "Provinces in dataset",
+    "hint": "{{count}} provincial-level regions (demo seed data)",
+    "cityCount": "{{count}} cities",
+    "groups": {
+      "SH": "SH (Shanghai)",
+      "NP": "NP (Nearby provinces)",
+      "OC": "OC (Other China)"
+    }
+  },
+  "detailPanel": {
+    "ariaLabel": "Break details",
+    "placeholder": "Select a province on the left to view spring, summer, autumn, and winter breaks for its cities."
+  },
+  "dateBreakList": {
+    "ariaLabel": "Cities on break for selected date",
+    "title": "Cities on break (selected date)",
+    "nationalOnBreak": "China · {{count}} cities on break",
+    "empty": "No cities nationwide are on the selected break type for this date."
+  },
+  "cityCard": {
+    "badgeMulti": "Multiple batches",
+    "badgeUncertain": "To verify",
+    "updated": "Updated: {{date}}",
+    "sourceLink": "Source",
+    "provinceAria": "Province: {{name}}"
+  },
+  "format": {
+    "from": "From {{date}}",
+    "until": "Until {{date}}"
+  }
+}
