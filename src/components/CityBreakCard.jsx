@@ -1,5 +1,9 @@
 import { formatDateRange } from '../utils/format'
 import { useI18n } from '../i18n/I18nContext'
+import {
+  getCityDisplayName,
+  getProvinceDisplayNameByCode,
+} from '../utils/placeNames'
 
 const BREAK_ORDER = ['spring', 'summer', 'autumn', 'winter']
 
@@ -7,20 +11,25 @@ function cityHasUncertainBreaks(city) {
   return BREAK_ORDER.some((key) => city.breaks?.[key]?.uncertain)
 }
 
-export default function CityBreakCard({ city, provinceName }) {
+export default function CityBreakCard({ city, provinceName, provinceCode }) {
   const { t, locale, seasonLabel } = useI18n()
+  const cityLabel = getCityDisplayName(city, locale)
+  const provinceLabel =
+    provinceName && provinceCode
+      ? getProvinceDisplayNameByCode(provinceCode, provinceName, locale)
+      : provinceName
 
   return (
     <article className="city-card">
       <header className="city-card__header">
         <h3 className="city-card__title">
-          {city.name}
-          {provinceName ? (
+          {cityLabel}
+          {provinceLabel ? (
             <span
               className="city-card__province"
-              aria-label={t('cityCard.provinceAria', { name: provinceName })}
+              aria-label={t('cityCard.provinceAria', { name: provinceLabel })}
             >
-              {provinceName}
+              {provinceLabel}
             </span>
           ) : null}
         </h3>

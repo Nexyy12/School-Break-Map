@@ -45,11 +45,16 @@
   gap: 1rem;
 }
 
-.app-header__controls {
+.app-header__brand {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-header__title-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .language-picker {

@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n/I18nContext'
+import { getProvinceDisplayName } from '../utils/placeNames'
 
 const GROUPS = [
   {
@@ -16,7 +17,7 @@ const GROUPS = [
 ]
 
 function ProvinceItems({ provinces, selectedCode, onSelect }) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   return (
     <ul className="province-list__items">
@@ -28,7 +29,9 @@ function ProvinceItems({ provinces, selectedCode, onSelect }) {
             onClick={() => onSelect(p.code)}
             aria-current={selectedCode === p.code ? 'true' : undefined}
           >
-            <span className="province-list__name">{p.name}</span>
+            <span className="province-list__name">
+              {getProvinceDisplayName(p, locale)}
+            </span>
             <span className="province-list__meta">
               {t('provinceList.cityCount', { count: p.cities.length })}
             </span>

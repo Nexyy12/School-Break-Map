@@ -1,14 +1,33 @@
 import { useMemo } from 'react'
 import { citiesOnBreakForDay } from '../utils/heatmap'
 import { useI18n } from '../i18n/I18nContext'
+import {
+  getCityDisplayName,
+  getProvinceDisplayNameByCode,
+} from '../utils/placeNames'
 import CityBreakCard from './CityBreakCard'
 
 export default function DateBreakCityList({ provinces, breakKey, selectedDate }) {
-  const { t, seasonLabel } = useI18n()
-  const entries = useMemo(
-    () => citiesOnBreakForDay(breakKey, provinces, selectedDate),
-    [breakKey, provinces, selectedDate],
-  )
+  const { t, seasonLabel, locale } = useI18n()
+  const entries = useMemo(() => {
+    const list = citiesOnBreakForDay(breakKey, provinces, selectedDate)
+    if (locale !== 'en') return list
+    return [...list].sort((a, b) => {
+      const byProvince = getProvinceDisplayNameByCode(
+        a.provinceCode,
+        a.provinceName,
+        locale,
+      ).localeCompare(
+        getProvinceDisplayNameByCode(b.provinceCode, b.provinceName, locale),
+        'en',
+      )
+      if (byProvince !== 0) return byProvince
+      return getCityDisplayName(a.city, locale).localeCompare(
+        getCityDisplayName(b.city, locale),
+        'en',
+      )
+    })
+  }, [breakKey, provinces, selectedDate, locale])
 
   return (
     <section className="date-break-list" aria-label={t('dateBreakList.ariaLabel')}>
@@ -30,6 +49,7 @@ export default function DateBreakCityList({ provinces, breakKey, selectedDate })
             <CityBreakCard
               key={`${code}-${city.name}`}
               city={city}
+              provinceCode={code}
               provinceName={provinceName}
             />
           ))}
