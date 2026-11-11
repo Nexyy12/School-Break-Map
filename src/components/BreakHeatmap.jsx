@@ -4,6 +4,7 @@ import {
   formatHeatmapDateHeader,
   heatCellBackground,
 } from '../utils/heatmap'
+import { getProvinceDisplayNameByCode } from '../utils/placeNames'
 import { useI18n } from '../i18n/I18nContext'
 
 const BREAK_OPTIONS = ['spring', 'summer', 'autumn', 'winter']
@@ -124,7 +125,7 @@ export default function BreakHeatmap({
                 {rows.map((row) => (
                   <tr key={row.code}>
                     <th className="heatmap-table__province" scope="row">
-                      {row.name}
+                      {getProvinceDisplayNameByCode(row.code, row.name, locale)}
                     </th>
                     {row.counts.map((count, i) => (
                       <td

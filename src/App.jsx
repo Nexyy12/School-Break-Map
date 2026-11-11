@@ -102,8 +102,11 @@ export default function App() {
       <header className="app-header">
         <div className="app-header__inner">
           <div className="app-header__row">
-            <div>
-              <h1 className="app-title">{t('app.title')}</h1>
+            <div className="app-header__brand">
+              <div className="app-header__title-row">
+                <h1 className="app-title">{t('app.title')}</h1>
+                <LanguagePicker />
+              </div>
               <p className="app-subtitle">
                 {t('app.subtitle', {
                   schoolYear: data.meta.schoolYear,
@@ -111,10 +114,7 @@ export default function App() {
                 })}
               </p>
             </div>
-            <div className="app-header__controls">
-              <LanguagePicker />
-              <YearPicker year={year} onChange={handleYearChange} />
-            </div>
+            <YearPicker year={year} onChange={handleYearChange} />
           </div>
         </div>
       </header>
