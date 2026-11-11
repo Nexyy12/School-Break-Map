@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import ChinaMap from './components/ChinaMap'
 import DetailPanel from './components/DetailPanel'
 import ProvinceList from './components/ProvinceList'
 import BreakHeatmap from './components/BreakHeatmap'
-import { provincesOnBreakForDay } from './utils/heatmap'
+import DateBreakCityList from './components/DateBreakCityList'
 import './App.css'
 
 const YEAR_OPTIONS = [2025, 2026]
@@ -50,18 +49,8 @@ export default function App() {
     return data.provinces.find((p) => p.code === selectedCode) ?? null
   }, [data, selectedCode])
 
-  const highlightedCodes = useMemo(() => {
-    if (!data || !selectedHeatmapDate) return []
-    return provincesOnBreakForDay(
-      heatmapBreakKey,
-      data.provinces,
-      selectedHeatmapDate,
-    )
-  }, [data, heatmapBreakKey, selectedHeatmapDate])
-
   const handleSelect = useCallback((code) => {
     setSelectedCode(code)
-    setSelectedHeatmapDate(null)
   }, [])
 
   const handleBreakKeyChange = useCallback((key) => {
@@ -122,16 +111,18 @@ export default function App() {
             selectedCode={selectedCode}
             onSelect={handleSelect}
           />
-          <div className="content-column">
-            <section className="map-section" aria-label="中国地图">
-              <ChinaMap
+          <div className="content-column content-column--detail">
+            {selectedHeatmapDate ? (
+              <DateBreakCityList
                 provinces={data.provinces}
-                selectedCode={selectedCode}
-                highlightedCodes={highlightedCodes}
-                onSelect={handleSelect}
+                breakKey={heatmapBreakKey}
+                selectedDate={selectedHeatmapDate}
+                provinceCode={selectedCode}
+                provinceName={selectedProvince?.name}
               />
-            </section>
-            <DetailPanel province={selectedProvince} meta={data.meta} />
+            ) : (
+              <DetailPanel province={selectedProvince} meta={data.meta} />
+            )}
           </div>
         </div>
       </main>

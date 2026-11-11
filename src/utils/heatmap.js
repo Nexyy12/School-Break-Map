@@ -158,6 +158,32 @@ export function buildHeatmapData(breakKey, provinces) {
 }
 
 /**
+ * Cities (with province metadata) on break for `day`; optional `provinceCode` filter.
+ */
+export function citiesOnBreakForDay(breakKey, provinces, day, provinceCode = null) {
+  if (!day) return []
+  const list = []
+  for (const province of provinces) {
+    if (provinceCode && province.code !== provinceCode) continue
+    for (const city of province.cities) {
+      if (cityOnBreakForDay(city, breakKey, day)) {
+        list.push({
+          provinceCode: province.code,
+          provinceName: province.name,
+          city,
+        })
+      }
+    }
+  }
+  list.sort((a, b) => {
+    const byProvince = a.provinceName.localeCompare(b.provinceName, 'zh')
+    if (byProvince !== 0) return byProvince
+    return a.city.name.localeCompare(b.city.name, 'zh')
+  })
+  return list
+}
+
+/**
  * Province codes with at least one city on break for `day` (heatmap effective ranges).
  */
 export function provincesOnBreakForDay(breakKey, provinces, day) {
