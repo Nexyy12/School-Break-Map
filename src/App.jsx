@@ -117,8 +117,6 @@ export default function App() {
                 provinces={data.provinces}
                 breakKey={heatmapBreakKey}
                 selectedDate={selectedHeatmapDate}
-                provinceCode={selectedCode}
-                provinceName={selectedProvince?.name}
               />
             ) : (
               <DetailPanel province={selectedProvince} meta={data.meta} />
