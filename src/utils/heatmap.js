@@ -210,14 +210,16 @@ export function heatCellBackground(count, maxCount) {
   return `hsl(214, ${saturation}%, ${lightness}%)`
 }
 
-const WEEKDAY_SHORT = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const WEEKDAY_ZH = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
 
-export function formatHeatmapDateHeader(iso) {
+export function formatHeatmapDateHeader(iso, locale = 'zh') {
   const d = parseIso(iso)
   const month = d.getMonth() + 1
   const day = d.getDate()
+  const weekdays = locale === 'en' ? WEEKDAY_EN : WEEKDAY_ZH
   return {
     dateLabel: `${month}/${day}`,
-    weekdayLabel: WEEKDAY_SHORT[d.getDay()],
+    weekdayLabel: weekdays[d.getDay()],
   }
 }

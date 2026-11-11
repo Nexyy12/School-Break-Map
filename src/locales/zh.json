@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "中国学期假期地图",
+    "subtitle": "{{schoolYear}} 学年 · 数据更新于 {{updatedAt}}",
+    "loading": "正在加载校历数据…",
+    "loadFailed": "加载失败：",
+    "unknownError": "未知错误",
+    "loadDataError": "无法加载 {{year}} 年数据（{{status}}）"
+  },
+  "footer": {
+    "disclaimer": "本演示数据标注来源链接；春秋假试点政策仍在扩散，开学季请核对教育厅最新通知。"
+  },
+  "detail": {
+    "disclaimer": "默认展示义务教育（小学、初中）区间；高三、初三等年级安排可能不同，请以各地教育局正式校历为准。部分西部/外省城市在无市级原文时沿用媒体汇总或省级框架，并标注 illustrative。"
+  },
+  "yearPicker": {
+    "ariaLabel": "选择学年数据年份"
+  },
+  "languagePicker": {
+    "ariaLabel": "选择界面语言",
+    "zh": "中文",
+    "en": "English"
+  },
+  "season": {
+    "spring": "春假",
+    "summer": "暑假",
+    "autumn": "秋假",
+    "winter": "寒假"
+  },
+  "heatmap": {
+    "ariaLabel": "假期热力图",
+    "title": "假期热力图",
+    "empty": "当前假期类型（{{season}}）暂无有效日期数据。",
+    "rangeHintBase": "{{season}} · {{start}} 至 {{end}} · 每日格子为该省城市在假人数（周末衔接日已计入热力图统计）",
+    "selectedHint": "· 已选 {{date}}，下方展示该日放假城市",
+    "clickHint": "· 点击日期列查看当日放假城市",
+    "provinceColumn": "省份",
+    "nationalTotal": "全国合计",
+    "periodAriaLabel": "选择假期类型"
+  },
+  "provinceList": {
+    "ariaLabel": "省份列表",
+    "title": "已收录省份",
+    "hint": "共 {{count}} 个省级行政区（演示种子数据）",
+    "cityCount": "{{count}} 个城市",
+    "groups": {
+      "SH": "SH",
+      "NP": "NP (Nearby Province)",
+      "OC": "OC (Other China)"
+    }
+  },
+  "detailPanel": {
+    "ariaLabel": "假期详情",
+    "placeholder": "请从左侧列表选择已收录省份，查看各市春、夏、秋、寒假安排。"
+  },
+  "dateBreakList": {
+    "ariaLabel": "选定日期放假城市",
+    "title": "选定日期放假城市",
+    "nationalOnBreak": "全国 · {{count}} 个城市在假",
+    "empty": "全国在本日没有城市处于所选假期类型内的放假区间。"
+  },
+  "cityCard": {
+    "badgeMulti": "多批次",
+    "badgeUncertain": "待核对",
+    "updated": "更新：{{date}}",
+    "sourceLink": "来源链接",
+    "provinceAria": "所属省份：{{name}}"
+  },
+  "format": {
+    "from": "{{date}} 起",
+    "until": "至 {{date}}"
+  }
+}

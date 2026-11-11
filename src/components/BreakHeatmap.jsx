@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
-import { breakLabel } from '../utils/format'
 import {
   buildHeatmapData,
   formatHeatmapDateHeader,
   heatCellBackground,
 } from '../utils/heatmap'
+import { useI18n } from '../i18n/I18nContext'
 
 const BREAK_OPTIONS = ['spring', 'summer', 'autumn', 'winter']
 
@@ -15,6 +15,7 @@ export default function BreakHeatmap({
   selectedDate,
   onSelectDate,
 }) {
+  const { t, locale, seasonLabel } = useI18n()
   const {
     dates,
     rows,
@@ -29,8 +30,8 @@ export default function BreakHeatmap({
   )
 
   const dateHeaders = useMemo(
-    () => dates.map((iso) => ({ iso, ...formatHeatmapDateHeader(iso) })),
-    [dates],
+    () => dates.map((iso) => ({ iso, ...formatHeatmapDateHeader(iso, locale) })),
+    [dates, locale],
   )
 
   const toggleDate = (iso) => {
@@ -40,28 +41,28 @@ export default function BreakHeatmap({
   const columnClass = (iso) =>
     selectedDate === iso ? 'heatmap-table__col--selected' : ''
 
+  const season = seasonLabel(breakKey)
+
   return (
-    <section className="heatmap-section" aria-label="假期热力图">
+    <section className="heatmap-section" aria-label={t('heatmap.ariaLabel')}>
       <div className="heatmap-section__head">
-        <h2 className="panel-title">假期热力图</h2>
+        <h2 className="panel-title">{t('heatmap.title')}</h2>
         <PeriodPicker breakKey={breakKey} onChange={onBreakKeyChange} />
       </div>
       {dates.length === 0 ? (
-        <p className="heatmap-empty">
-          当前假期类型（{breakLabel(breakKey)}）暂无有效日期数据。
-        </p>
+        <p className="heatmap-empty">{t('heatmap.empty', { season })}</p>
       ) : (
         <>
           <p className="panel-hint heatmap-range-hint">
-            {breakLabel(breakKey)} · {rangeStart} 至 {rangeEnd} · 每日格子为
-            该省城市在假人数（周末衔接日已计入热力图统计）
+            {t('heatmap.rangeHintBase', {
+              season,
+              start: rangeStart,
+              end: rangeEnd,
+            })}
             {selectedDate ? (
-              <>
-                {' '}
-                · 已选 <strong>{selectedDate}</strong>，下方展示该日放假城市
-              </>
+              <> {t('heatmap.selectedHint', { date: selectedDate })}</>
             ) : (
-              <> · 点击日期列查看当日放假城市</>
+              <> {t('heatmap.clickHint')}</>
             )}
           </p>
           <div className="heatmap-scroll">
@@ -69,7 +70,7 @@ export default function BreakHeatmap({
               <thead>
                 <tr className="heatmap-table__row-dates">
                   <th className="heatmap-table__corner" rowSpan={2} scope="col">
-                    省份
+                    {t('heatmap.provinceColumn')}
                   </th>
                   {dateHeaders.map(({ iso, dateLabel }) => (
                     <th
@@ -169,7 +170,7 @@ export default function BreakHeatmap({
                       className="heatmap-table__province heatmap-table__total-label"
                       scope="row"
                     >
-                      全国合计
+                      {t('heatmap.nationalTotal')}
                     </th>
                     {totals.map((count, i) => (
                       <td
@@ -210,12 +211,10 @@ export default function BreakHeatmap({
 }
 
 function PeriodPicker({ breakKey, onChange }) {
+  const { t, seasonLabel } = useI18n()
+
   return (
-    <div
-      className="heatmap-period"
-      role="radiogroup"
-      aria-label="选择假期类型"
-    >
+    <div className="heatmap-period" role="radiogroup" aria-label={t('heatmap.periodAriaLabel')}>
       {BREAK_OPTIONS.map((key) => (
         <label key={key} className="heatmap-period__option">
           <input
@@ -225,7 +224,7 @@ function PeriodPicker({ breakKey, onChange }) {
             checked={breakKey === key}
             onChange={() => onChange(key)}
           />
-          <span>{breakLabel(key)}</span>
+          <span>{seasonLabel(key)}</span>
         </label>
       ))}
     </div>

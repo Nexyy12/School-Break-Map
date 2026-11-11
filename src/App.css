@@ -45,6 +45,54 @@
   gap: 1rem;
 }
 
+.app-header__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.language-picker {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.language-picker__option {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.language-picker__option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.language-picker__option span {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.language-picker__option input:checked + span {
+  background: #fff;
+  color: #1e40af;
+  border-color: #fff;
+}
+
+.language-picker__option input:focus-visible + span {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .year-picker {
   display: flex;
   gap: 0.35rem;
