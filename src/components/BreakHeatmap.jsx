@@ -58,10 +58,10 @@ export default function BreakHeatmap({
             {selectedDate ? (
               <>
                 {' '}
-                · 已选 <strong>{selectedDate}</strong>，地图高亮有城市在假的省份
+                · 已选 <strong>{selectedDate}</strong>，下方展示该日放假城市
               </>
             ) : (
-              <> · 点击日期列可选中并在地图上高亮</>
+              <> · 点击日期列查看当日放假城市</>
             )}
           </p>
           <div className="heatmap-scroll">

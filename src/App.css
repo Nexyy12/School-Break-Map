@@ -118,6 +118,10 @@
   min-width: 0;
 }
 
+.content-column--detail {
+  min-height: 280px;
+}
+
 @media (max-width: 900px) {
   .app-main__body {
     grid-template-columns: 1fr;
@@ -503,6 +507,84 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.date-break-list {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.date-break-list__head {
+  margin: 0;
+}
+
+.date-break-list__head .panel-title {
+  margin-bottom: 0.35rem;
+}
+
+.date-break-list__meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.date-break-list__date {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.date-break-list__empty {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.date-break-list__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.55rem;
+  max-height: min(58vh, 520px);
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.date-break-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.date-break-list__province {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.date-break-list__city {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.date-break-list__grid--single-province .date-break-list__item {
+  flex-direction: row;
+  align-items: center;
 }
 
 .city-list {
