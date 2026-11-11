@@ -570,21 +570,17 @@
   background: #f8fafc;
 }
 
-.date-break-list__province {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #64748b;
-}
-
 .date-break-list__city {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #1e293b;
+  line-height: 1.35;
 }
 
-.date-break-list__grid--single-province .date-break-list__item {
-  flex-direction: row;
-  align-items: center;
+.date-break-list__province {
+  font-size: inherit;
+  font-weight: 500;
+  color: #64748b;
 }
 
 .city-list {
